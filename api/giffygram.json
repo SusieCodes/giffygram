@@ -1,0 +1,36 @@
+{
+  "users": [
+    {
+      "id": "1",
+      "name": "Susie",
+      "dateJoined": "1630513838389",
+      "email": "susie.stanley3@yahoo.com"
+    },
+    {
+      "id": "2",
+      "name": "Brenda",
+      "dateJoined": "1630513838389",
+      "email": "brenda@yahoo.com"
+    },
+    {
+      "id": "3",
+      "name": "Susie",
+      "dateJoined": 1630513631183,
+      "email": "susie.stanley3@yahoo.com"
+    },
+    {
+      "id": "4",
+      "name": "Diana",
+      "dateJoined": 1630513631183,
+      "email": "diana@yahoo.com"
+    },
+    {
+      "name": "Mary",
+      "dateJoined": 1630513631183,
+      "email": "mary@yahoo.com",
+      "id": "ttb_rK5"
+    }
+  ],
+  "posts": [],
+  "messages": []
+}
