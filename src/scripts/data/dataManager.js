@@ -17,3 +17,14 @@ export const getPosts = () => {
         return parsedResponse;
     })
 }
+
+const loggedInUser = {
+    "id": "1",
+    "name": "Susie",
+    "dateJoined": "1630513838389",
+    "email": "susie.stanley3@yahoo.com"
+}
+
+export const getLoggedInUser = () => {
+	return loggedInUser;
+}
