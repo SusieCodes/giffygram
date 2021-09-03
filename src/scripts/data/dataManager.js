@@ -13,7 +13,7 @@ export const getPosts = () => {
         return parsedResponse;
     })
 }
-
+// not exported because it is only called from within this file
 const loggedInUser = {
     "id": "1",
     "name": "Susie",

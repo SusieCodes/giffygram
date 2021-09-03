@@ -8,8 +8,8 @@
 
 body, button, input, select, textarea {
     color: #404040;
-    font-family: "Questrial", Arial, sans-serif;
-    font-size: 1.5rem;
+    font-family: "Arial", sans-serif;
+    font-size: 20px;
     line-height: 1.5;
     padding: 20px;
     margin: 0;
@@ -18,6 +18,34 @@ body, button, input, select, textarea {
 h1, h2, h3, h4, h5, h6 {
     font-family: "Patua One", serif;
     letter-spacing: 2px;
+}
+
+.post {
+    width: 500px;
+    padding: 10px;
+}
+
+.post h2 {
+    font-size: 28px;
+}
+
+.post__image {
+    border: 5px solid PaleVioletRed;
+    border-radius: 10px;
+}
+
+.details {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+
+.details__text {
+    font-weight: 900;
+}
+
+.details__info {
+    font-weight: 100;
 }
 
 .actionIcon {
@@ -49,7 +77,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .jokes-btn {
     background-color: pink;
-    border: 3px solid hotpink;
+    border: 3px solid PaleVioletRed;
     border-radius: 15px;
     font-weight: 600;
     padding: 10px;

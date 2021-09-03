@@ -1,6 +1,6 @@
-import { getUsers } from "./data/dataManager.js";
-import { getPosts, getLoggedInUser } from "./data/dataManager.js";
+import { getUsers, getPosts, getLoggedInUser } from "./data/dataManager.js";
 import { getJokes } from "./data/dadJoke.js";
+import { postList } from "./feed/postList.js"; 
 
 
 const allUsers = getUsers()
@@ -22,24 +22,15 @@ const allPosts = getPosts()
 })
 console.log("All posts: ", allPosts);
 
-
-/**
- * Main logic module for what should happen on initial page load for Giffygram
- */
-
-/*
-    This function performs one, specific task.
-
-    1. Can you explain what that task is?
-    2. Are you defining the function here or invoking it?
-*/
-
-
-const startGiffyGram = () => {
-    const postElement = document.querySelector(".postList");
-	postElement.innerHTML = "Hello Cohort 51"
+const showPostList = () => {
+	const postElement = document.querySelector(".postList");
+	getPosts().then((allPosts) => {
+		postElement.innerHTML = postList(allPosts);
+	})
 }
-// Are you defining the function here or invoking it?
+
+const startGiffyGram = () => showPostList();
+
 startGiffyGram();
 
 const startJokes = () => {
