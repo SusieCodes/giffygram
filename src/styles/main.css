@@ -23,14 +23,17 @@ h1, h2, h3, h4, h5, h6 {
 .post {
     width: 500px;
     padding: 10px;
+    margin-bottom: 20px;
 }
 
 .post h2 {
     font-size: 28px;
+    padding: 0px;
+    margin: 0px;
 }
 
 .post__image {
-    border: 5px solid PaleVioletRed;
+    border: 5px solid darkturquoise;
     border-radius: 10px;
 }
 
