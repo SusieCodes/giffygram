@@ -2,9 +2,9 @@
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
-    justify-content: space-around;
+    justify-content: flex-start;
     border-bottom: 1px solid lightblue;
-    padding: 20px;
+    padding: 20px 0px;
     width: 100%;
     background-color: whitesmoke;
 }
@@ -24,25 +24,27 @@
 }
 
 .navigation__name {
+    font-size: 50px;
+    font-weight: bolder;
     margin: auto auto;
-    font-size: 26px;
 }
 
 .navigation__icon img {
     width: 75px;
+    text-align: left;
+    margin: 0px;
 }
 
 
 .navigation__message {
+    font-size: 26px;
+    font-weight: bold;
     /* margin-left: auto;
     margin-right: 30px; */
     display: flex;
     flex-direction: row;
     /* position: relative; */
-}
-
-.navigation__message > img {
-    height: 60px;
+    margin: auto auto;
 }
 
 /* .notification__count{
@@ -61,10 +63,18 @@
     /* flex: 1; */
 }
 
-/* .navigation__logout {
-    margin-right: 30px;
-} */
+#logout {
+    font-size: 24px;
+    font-weight: bold;
+    color: rgb(0, 164, 167);
+    text-decoration: none;
+    /* border: 1px solid black; */
+}
 
 #directMessageIcon {
     cursor: pointer;
+}
+
+.fakelink {
+    border: 1px solid black;
 }

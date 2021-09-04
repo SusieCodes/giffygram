@@ -1,7 +1,7 @@
 @import "navigation.css";
 @import "footer.css";
-/* @import "feed.css"; */
-/* @import "post.css"; */
+@import "feed.css";
+@import "post.css";
 @import url("https://fonts.googleapis.com/css?family=Comfortaa|Patua+One");
 
 /* Typography */
@@ -41,25 +41,35 @@ header {
 }
 
 .center {
+    font-size: 36px;
     text-align: center;
 }
 
 .post {
     width: 500px;
-    padding: 10px;
+    padding: 30px;
     margin-bottom: 20px;
-    border: 1px solid black;
+    background-color: #EDF9FB;
+    border-radius: 15px;
 }
 
-.post h2 {
-    font-size: 28px;
+.post__title {
     padding: 0px;
     margin: 0px;
 }
 
+.post h2 {
+    font-size: 24px;
+    text-align: left;
+    padding: 0px;
+    margin-bottom: 10px;
+}
+
 .post__image {
-    border: 5px solid darkturquoise;
+    /* border: 5px solid rgb(0, 185, 188); */
+    border: 8px solid powderblue;
     border-radius: 10px;
+    margin: 10px 0px;
 }
 
 .details {
@@ -69,7 +79,9 @@ header {
 
 .details__info {
     font-weight: 100;
-    padding-bottom: 10px;
+    text-align: justify;
+    padding: 0px 20px;
+    margin-bottom: 20px;
 }
 
 .details__text {
@@ -83,7 +95,7 @@ header {
 }
 
 .details__user a {
-    color: pink;
+    color: PaleVioletRed;
     font-weight: 400;
     padding: 0px;
 }
@@ -123,6 +135,8 @@ header {
 /* dad jokes button */
 .jokes {
     text-align: center;
+    width: 500px;
+    white-space: wrap;
 }
 .jokes-btn {
     width: 225px;
@@ -132,5 +146,5 @@ header {
     border-radius: 15px;
     font-weight: 600;
     padding: 10px;
-    margin: 10px;
+    margin: 20px 0px;
 }

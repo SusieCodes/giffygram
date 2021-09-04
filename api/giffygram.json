@@ -36,23 +36,23 @@
       "id": 1,
       "title": "Title Number One",
       "imageURL": "https://media.giphy.com/media/wzwktYRigQ2zLeykPI/giphy.gif",
-      "descript": "This is my first post",
+      "descript": "Cupcake ipsum dolor sit amet liquorice. Carrot cake pudding marshmallow sweet roll topping marzipan bear claw gummies candy. Gummies topping oat cake lemon drops danish cotton candy jelly sweets.",
       "userId": 1,
       "timestamp": 1630513631183
     },
     {
       "id": 2,
-      "title": "Title Number One",
-      "imageURL": "https://media.giphy.com/media/Q7ozWVYCR0nyW2rvPW/giphy.gif",
-      "descript": "This is my second post",
+      "title": "Title Number Two",
+      "imageURL": "https://media.giphy.com/media/12PIT4DOj6Tgek/giphy.gif",
+      "descript": "Cupcake ipsum dolor sit amet liquorice. Carrot cake pudding marshmallow sweet roll topping marzipan bear claw gummies candy. Gummies topping oat cake lemon drops danish cotton candy jelly sweets.",
       "userId": 1,
       "timestamp": 1630513631183
     },
     {
       "id": 3,
-      "title": "Title Number One",
+      "title": "Title Number Three",
       "imageURL": "https://media.giphy.com/media/26n6Gx9moCgs1pUuk/giphy.gif",
-      "descript": "This is my third post",
+      "descript": "Cupcake ipsum dolor sit amet liquorice. Carrot cake pudding marshmallow sweet roll topping marzipan bear claw gummies candy. Gummies topping oat cake lemon drops danish cotton candy jelly sweets.",
       "userId": 1,
       "timestamp": 1630513631183
     }
