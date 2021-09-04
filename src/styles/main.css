@@ -37,6 +37,7 @@ header {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    margin-top: 152px;
     margin-bottom: 175px;
 }
 
@@ -58,14 +59,22 @@ header {
 
 .jokes-btn {
     align-self: center;
-    width: 225px;
-    text-align: center;
+    width: 300px;
+
+    font-weight: 600;
+    background-color: white;
+    border: 3px solid powderblue;
+    border-radius: 15px;
+    padding: 10px 0px;
+    margin: 20px 0px;
+
+    /* text-align: center;
     background-color: pink;
     border: 3px solid PaleVioletRed;
     border-radius: 15px;
     font-weight: 600;
     padding: 10px;
-    margin: 20px 0px;
+    margin: 20px 0px; */
 }
 
 .jokes {
@@ -74,7 +83,9 @@ header {
     width: 500px;
     white-space: wrap;
 }
+/* end of dadjokes */
 
+/* start of post styling */
 .post {
     width: 500px;
     padding: 30px;
@@ -139,12 +150,13 @@ header {
     margin: 10px;
     cursor: pointer;
 }
+/* end of post styling */
 
 .highlight {
     border-color: purple;
 }
 
-.fakeLink {
+/* .fakeLink {
     color: -webkit-link;
     cursor: pointer;
     text-decoration: underline;
@@ -155,7 +167,7 @@ header {
 
 .fakeLink:hover {
     font-weight: bold;
-}
+} */
 
 .loginForm {
     margin: 0px;

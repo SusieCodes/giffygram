@@ -3,7 +3,7 @@
   flex-direction: row;
   flex-wrap: nowrap;
   justify-content: center;
-  border-top: 1px solid lightblue;
+  border-top: 3px solid lightblue;
   padding: 0px;
   position: fixed;
   left: 0;
@@ -17,7 +17,7 @@
   /* align-self: flex-end; */
   flex-basis: 20%;
   text-align: left;
-  padding: 10px 0px;
+  padding-top: 17px;
 }
 
 .footer__left img {

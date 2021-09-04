@@ -2,10 +2,15 @@
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
-    justify-content: space-evenly;
+    justify-content: space-between;
+    border-bottom: 3px solid lightblue;
 
-    border-bottom: 1px solid lightblue;
-    padding: 10px 0px 5px 0px;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+
+    padding: 10px 10px 5px 10px;
     width: 100%;
     background-color: whitesmoke;
 }
@@ -16,6 +21,7 @@
 
 .navigation__left {
     text-align: left;
+    padding-left: 10px;
     margin: auto auto;
 }
 
@@ -77,10 +83,17 @@
     background-color: white;
     border: 3px solid lightgray;
     border-radius: 15px;
-    padding: 10px 15px;
+    padding: 10px 10px;
 }
 
-/* .fakelink {
-    color: powderblue;
-    border: 1px solid black;
-} */
+.navigation__logout button {
+    border: 0px;
+    background-color: transparent;
+}
+
+.fakelink {
+    /* font-size: 24px;
+    font-weight: bold;
+    color: rgb(124, 212, 223);
+    text-decoration: none; */
+}
