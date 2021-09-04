@@ -74,7 +74,9 @@ header {
     width: 500px;
     white-space: wrap;
 }
+/* end of dadjokes */
 
+/* start of post styling */
 .post {
     width: 500px;
     padding: 30px;
@@ -139,12 +141,13 @@ header {
     margin: 10px;
     cursor: pointer;
 }
+/* end of post styling */
 
 .highlight {
     border-color: purple;
 }
 
-.fakeLink {
+/* .fakeLink {
     color: -webkit-link;
     cursor: pointer;
     text-decoration: underline;
@@ -155,7 +158,7 @@ header {
 
 .fakeLink:hover {
     font-weight: bold;
-}
+} */
 
 .loginForm {
     margin: 0px;
