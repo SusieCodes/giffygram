@@ -38,11 +38,42 @@ header {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    margin-bottom: 200px;
 }
 
 .center {
     font-size: 36px;
     text-align: center;
+}
+
+/* dad jokes button */
+.the-jokes {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #EDF9FB;
+    border-radius: 15px;
+    padding: 20px 0px;
+    margin-top: 20px;
+}
+
+.jokes-btn {
+    align-self: center;
+    width: 225px;
+    text-align: center;
+    background-color: pink;
+    border: 3px solid PaleVioletRed;
+    border-radius: 15px;
+    font-weight: 600;
+    padding: 10px;
+    margin: 20px 0px;
+}
+
+.jokes {
+    align-self: center;
+    text-align: center;
+    width: 500px;
+    white-space: wrap;
 }
 
 .post {
@@ -130,21 +161,4 @@ header {
 
 .loginForm {
     margin: 0px;
-}
-
-/* dad jokes button */
-.jokes {
-    text-align: center;
-    width: 500px;
-    white-space: wrap;
-}
-.jokes-btn {
-    width: 225px;
-    text-align: center;
-    background-color: pink;
-    border: 3px solid PaleVioletRed;
-    border-radius: 15px;
-    font-weight: 600;
-    padding: 10px;
-    margin: 20px 0px;
 }

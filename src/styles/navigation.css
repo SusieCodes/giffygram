@@ -4,7 +4,7 @@
     flex-wrap: nowrap;
     justify-content: flex-start;
     border-bottom: 1px solid lightblue;
-    padding: 20px 0px;
+    padding: 10px 0px 5px 0px;
     width: 100%;
     background-color: whitesmoke;
 }
@@ -30,9 +30,9 @@
 }
 
 .navigation__icon img {
-    width: 75px;
+    width: 125px;
     text-align: left;
-    margin: 0px;
+    margin: 5px;
 }
 
 
@@ -44,6 +44,11 @@
     display: flex;
     flex-direction: row;
     /* position: relative; */
+    margin: auto auto;
+}
+
+.navigation__message img{
+    height: 60px;
     margin: auto auto;
 }
 
@@ -66,8 +71,9 @@
 #logout {
     font-size: 24px;
     font-weight: bold;
-    color: rgb(0, 164, 167);
+    color: rgb(124, 212, 223);
     text-decoration: none;
+    /* background-color: #EDF9FB; */
     /* border: 1px solid black; */
 }
 
@@ -75,6 +81,14 @@
     cursor: pointer;
 }
 
-.fakelink {
-    border: 1px solid black;
+.navigation__logout {
+    background-color: white;
+    border: 3px solid lightgray;
+    border-radius: 8px;
+    padding: 15px;
 }
+
+/* .fakelink {
+    color: powderblue;
+    border: 1px solid black;
+} */
