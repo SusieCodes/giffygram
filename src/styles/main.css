@@ -3,16 +3,16 @@
 @import "feed.css";
 @import "post.css";
 @import url("https://fonts.googleapis.com/css?family=Comfortaa|Patua+One");
-/*Typography
---------------------------------------------------------------*/
+
+/* Typography */
 
 body, button, input, select, textarea {
     color: #404040;
     font-family: "Arial", sans-serif;
     font-size: 20px;
-    line-height: 1.5;
-    padding: 20px;
-    margin: 0;
+    /* line-height: 20px; */
+    padding: 0px;
+    margin: 0px;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -20,40 +20,94 @@ h1, h2, h3, h4, h5, h6 {
     letter-spacing: 2px;
 }
 
-.post {
-    width: 500px;
-    padding: 10px;
-    margin-bottom: 20px;
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 }
 
-.post h2 {
-    font-size: 28px;
+.giffygram {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+.flex-container {
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.center {
+    font-size: 36px;
+    text-align: center;
+}
+
+.post {
+    width: 500px;
+    padding: 30px;
+    margin-bottom: 20px;
+    background-color: #EDF9FB;
+    border-radius: 15px;
+}
+
+.post__title {
     padding: 0px;
     margin: 0px;
 }
 
+.post h2 {
+    font-size: 24px;
+    text-align: left;
+    padding: 0px;
+    margin-bottom: 10px;
+}
+
 .post__image {
-    border: 5px solid darkturquoise;
+    /* border: 5px solid rgb(0, 185, 188); */
+    border: 8px solid powderblue;
     border-radius: 10px;
+    margin: 10px 0px;
 }
 
 .details {
     display: flex;
     flex-direction: row;
-    flex-wrap: nowrap;
-}
-
-.details__text {
-    font-weight: 900;
 }
 
 .details__info {
     font-weight: 100;
+    text-align: justify;
+    padding: 0px 20px;
+    margin-bottom: 20px;
+}
+
+.details__text {
+    font-weight: 600;
+    padding-right: 10px;
+}
+
+.details__user {
+    font-weight: 400;
+    padding: 0px;
+}
+
+.details__user a {
+    color: PaleVioletRed;
+    font-weight: 400;
+    padding: 0px;
+}
+
+.details__when {
+    font-weight: 400;
+    padding-left: 5px;
 }
 
 .actionIcon {
-    height: 1.2em;
-    margin: 0.5em 0.5em;
+    height: 20px;
+    margin: 10px;
     cursor: pointer;
 }
 
@@ -75,14 +129,22 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .loginForm {
-    margin: 0 25%;
+    margin: 0px;
 }
 
+/* dad jokes button */
+.jokes {
+    text-align: center;
+    width: 500px;
+    white-space: wrap;
+}
 .jokes-btn {
+    width: 225px;
+    text-align: center;
     background-color: pink;
     border: 3px solid PaleVioletRed;
     border-radius: 15px;
     font-weight: 600;
     padding: 10px;
-    margin: 0px;
+    margin: 20px 0px;
 }
