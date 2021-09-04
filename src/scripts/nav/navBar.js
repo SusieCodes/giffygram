@@ -10,7 +10,7 @@ export const navBar = () => {
             <div class="navigation__left navigation__search">
                 <input type="text" id="postSearch" placeholder=" Search posts..." />
             </div>
-            <div class="navigation__right navigation__message"><p>Post Message</p>
+            <div class="navigation__right navigation__message"><p>Post Message ⇨</p>
                 <img id="directMessageIcon" src="./images/fountain-pen.svg" alt="Direct message" />
             </div>
             <div class="navigation__right navigation__logout">

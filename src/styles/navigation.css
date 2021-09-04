@@ -2,7 +2,8 @@
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
-    justify-content: flex-start;
+    justify-content: space-evenly;
+
     border-bottom: 1px solid lightblue;
     padding: 10px 0px 5px 0px;
     width: 100%;
@@ -25,7 +26,7 @@
 
 .navigation__name {
     font-size: 50px;
-    font-weight: bolder;
+    font-weight: 800;
     margin: auto auto;
 }
 
@@ -39,11 +40,8 @@
 .navigation__message {
     font-size: 26px;
     font-weight: bold;
-    /* margin-left: auto;
-    margin-right: 30px; */
     display: flex;
     flex-direction: row;
-    /* position: relative; */
     margin: auto auto;
 }
 
@@ -64,17 +62,11 @@
     border-radius: 25px;
 } */
 
-.navigation__messageItem {
-    /* flex: 1; */
-}
-
 #logout {
     font-size: 24px;
     font-weight: bold;
     color: rgb(124, 212, 223);
     text-decoration: none;
-    /* background-color: #EDF9FB; */
-    /* border: 1px solid black; */
 }
 
 #directMessageIcon {
@@ -84,8 +76,8 @@
 .navigation__logout {
     background-color: white;
     border: 3px solid lightgray;
-    border-radius: 8px;
-    padding: 15px;
+    border-radius: 15px;
+    padding: 10px 15px;
 }
 
 /* .fakelink {
