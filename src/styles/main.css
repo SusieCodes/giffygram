@@ -1,18 +1,18 @@
 @import "navigation.css";
 @import "footer.css";
-@import "feed.css";
-@import "post.css";
+/* @import "feed.css"; */
+/* @import "post.css"; */
 @import url("https://fonts.googleapis.com/css?family=Comfortaa|Patua+One");
-/*Typography
---------------------------------------------------------------*/
+
+/* Typography */
 
 body, button, input, select, textarea {
     color: #404040;
     font-family: "Arial", sans-serif;
     font-size: 20px;
-    line-height: 1.5;
-    padding: 20px;
-    margin: 0;
+    /* line-height: 20px; */
+    padding: 0px;
+    margin: 0px;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -20,10 +20,35 @@ h1, h2, h3, h4, h5, h6 {
     letter-spacing: 2px;
 }
 
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.giffygram {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+.flex-container {
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.center {
+    text-align: center;
+}
+
 .post {
     width: 500px;
     padding: 10px;
     margin-bottom: 20px;
+    border: 1px solid black;
 }
 
 .post h2 {
@@ -69,8 +94,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .actionIcon {
-    height: 1.2em;
-    margin: 0.5em 0.5em;
+    height: 20px;
+    margin: 10px;
     cursor: pointer;
 }
 
@@ -92,15 +117,20 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .loginForm {
-    margin: 0 25%;
+    margin: 0px;
 }
 
 /* dad jokes button */
+.jokes {
+    text-align: center;
+}
 .jokes-btn {
+    width: 225px;
+    text-align: center;
     background-color: pink;
     border: 3px solid PaleVioletRed;
     border-radius: 15px;
     font-weight: 600;
     padding: 10px;
-    margin: 0px;
+    margin: 10px;
 }

@@ -24,16 +24,16 @@ console.log("All users: ", allUsers);
 // })
 // console.log("All posts: ", allPosts);
 
+const showNavBar = () => {
+    const navElement = document.querySelector("header");
+	navElement.innerHTML = navBar();
+}
+
 const showPostList = () => {
 	const postElement = document.querySelector(".postList");
 	getPosts().then((allPosts) => {
 		postElement.innerHTML = postList(allPosts);
 	})
-}
-
-const showNavBar = () => {
-    const navElement = document.querySelector("nav");
-	navElement.innerHTML = navBar();
 }
 
 const showFooter = () => {

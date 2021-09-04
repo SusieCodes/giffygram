@@ -10,13 +10,24 @@
 <body>
 	
     <main class="giffygram">
-		<nav></nav>
-		<section class="entryForm"></section>
-		<h3 class="center">My List</h3>
-		<section class="postList"></section><br>
-		<button id="jokes-btn" class="jokes-btn">Dad Jokes Please!</button>
-		<section id="jokes" class="jokes"></section>
+
+		<header></header>
+
+		<div class="flex-container">
+			
+			<section class="entryForm"></section>
+			<h3 class="center">My List</h3>
+			<section class="postList"><!-- posts from API go here --></section>
+
+			<div class="the-jokes">
+			<button id="jokes-btn" class="jokes-btn">Dad Jokes Please!</button>
+			<section id="jokes" class="jokes"><!-- jokes from API go here --></section>
+			</div> <!-- closes the-jokes-->
+
+		</div> <!-- closes flex-container -->
+
 		<footer id="footer" class="footer"></footer>
+
 	</main>
 
     <script type="module" src="./scripts/main.js"></script>
