@@ -2,21 +2,20 @@
 @import "footer.css";
 @import "feed.css";
 @import "post.css";
-@import url("https://fonts.googleapis.com/css?family=Comfortaa|Patua+One");
+/* @import url("https://fonts.googleapis.com/css?family=Comfortaa|Patua+One"); */
 
 /* Typography */
 
 body, button, input, select, textarea {
     color: #404040;
-    font-family: "Arial", sans-serif;
+    font-family: "Poppins", sans-serif;
     font-size: 20px;
-    /* line-height: 20px; */
     padding: 0px;
     margin: 0px;
 }
 
 h1, h2, h3, h4, h5, h6 {
-    font-family: "Patua One", serif;
+    font-family: "PT Serif Caption", serif;
     letter-spacing: 2px;
 }
 
@@ -38,11 +37,42 @@ header {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    margin-bottom: 175px;
 }
 
 .center {
     font-size: 36px;
     text-align: center;
+}
+
+/* dad jokes button */
+.the-jokes {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #EDF9FB;
+    border-radius: 15px;
+    padding: 20px 0px;
+    margin: 40px 0px;
+}
+
+.jokes-btn {
+    align-self: center;
+    width: 225px;
+    text-align: center;
+    background-color: pink;
+    border: 3px solid PaleVioletRed;
+    border-radius: 15px;
+    font-weight: 600;
+    padding: 10px;
+    margin: 20px 0px;
+}
+
+.jokes {
+    align-self: center;
+    text-align: center;
+    width: 500px;
+    white-space: wrap;
 }
 
 .post {
@@ -66,9 +96,8 @@ header {
 }
 
 .post__image {
-    /* border: 5px solid rgb(0, 185, 188); */
     border: 8px solid powderblue;
-    border-radius: 10px;
+    border-radius: 15px;
     margin: 10px 0px;
 }
 
@@ -130,21 +159,4 @@ header {
 
 .loginForm {
     margin: 0px;
-}
-
-/* dad jokes button */
-.jokes {
-    text-align: center;
-    width: 500px;
-    white-space: wrap;
-}
-.jokes-btn {
-    width: 225px;
-    text-align: center;
-    background-color: pink;
-    border: 3px solid PaleVioletRed;
-    border-radius: 15px;
-    font-weight: 600;
-    padding: 10px;
-    margin: 20px 0px;
 }

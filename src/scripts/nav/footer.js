@@ -1,11 +1,12 @@
 export const Footer = () => {
     return `
             <div class="footer__left">
-                <img src="./images/pb.png" alt="Giffygram icon" />
+                <img src="./images/giffylogo.png" alt="Giffygram icon" />
             </div>
-            <div class="footer__item footer__name">
+
+            <div class="footer__middle footer__name">
                 <p class="giffy">Giffygram</p>
-                <p>&copy;2021 Susie Stanley</p>
+                <p class="copyright">&copy;2021 Susie Stanley | All Rights Reserved</p>
             </div>
             
             <div class="dropup footer__right">
@@ -19,6 +20,6 @@ export const Footer = () => {
                 </div> <!-- closes dropbtn -->
             </div> <!-- closes dropup -->
 
-            </p></div>
+            </p>
     `
 }
