@@ -1,7 +1,7 @@
 export const Footer = () => {
     return `
             <div class="footer__left">
-                <img src="./images/giffylogo.png" alt="Giffygram icon" />
+                <img id="jar" src="./images/giffylogo.png" alt="Giffygram icon" />
             </div>
 
             <div class="footer__middle footer__name">

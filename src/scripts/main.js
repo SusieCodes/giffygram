@@ -74,8 +74,10 @@ const handleGiffyClick = (event) => {
     console.log("what was clicked", event)
     if (event.target.id === "logout") {
         console.log("You clicked on logout")
-    } else if (event.target.id === "directMessageIcon") {
-        console.log("You clicked on message icon")
+    } else if (event.target.id === "pen") {
+        alert("You clicked on the pen")
+    } else if (event.target.id === "jar") {
+        alert("You clicked on the pb jar")
     } else if (event.target.id === "twentyone") {
 		changeBtn(2021);
         showYearList(2021);   
