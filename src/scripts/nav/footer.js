@@ -48,4 +48,6 @@ export const changeBtn = (year) => {
         <a id="seventeen" class="links" href="#">2017</a>
         </div> <!-- closes menu-content -->
         `
+        const titleElement = document.querySelector("#title");
+        titleElement.innerHTML = `<h3 class="center">Giffys from ${year}</h3>`
 }

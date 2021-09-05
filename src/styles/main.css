@@ -12,6 +12,7 @@ body, button, input, select, textarea {
     font-size: 20px;
     padding: 0px;
     margin: 0px;
+    text-align: center;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -33,6 +34,7 @@ header {
 }
 
 .flex-container {
+    width: 80%;
     align-self: center;
     display: flex;
     flex-direction: column;
@@ -48,9 +50,11 @@ header {
 
 /* dad jokes button */
 .the-jokes {
+    align-self: center;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    width: 560px;
     background-color: #EDF9FB;
     border-radius: 15px;
     padding: 20px 0px;
@@ -68,15 +72,6 @@ header {
     border-radius: 15px;
     padding: 10px 0px;
     margin: 20px 0px;
-    /* font-size: 22px;
-    font-weight: bolder;
-    white-space: nowrap;
-    min-width: 300px;
-    color: rgb(124, 212, 223);
-    background-color: white;
-    border: 3px solid lightgray;
-    border-radius: 15px;
-    padding: 5px; */
 }
 
 .jokes {
@@ -92,6 +87,10 @@ header {
 /* end of dadjokes */
 
 /* start of post styling */
+.postList {
+    align-self: center;
+}
+
 .post {
     width: 500px;
     padding: 30px;
