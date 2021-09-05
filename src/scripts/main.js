@@ -49,32 +49,41 @@ const startGiffyGram = () => {
 
 startGiffyGram();
 
-const applicationElement = document.querySelector(".giffygram");
 
-// applicationElement.addEventListener("click", event => {
-//     console.log("what was clicked", event.target)
-// 	if (event.target.id === "logout"){
-// 		console.log("You clicked on logout")
-// 	}
-// })
+// start dadjokes section *******************
 
-const handleGiffyClick = (event) => {
-    console.log("what was clicked", event)
-    if (event.target.id === "logout") {
-        console.log("You clicked on logout")
-    }
-}
-
-applicationElement.addEventListener("click", handleGiffyClick)
-
-// dadjokes section of page
 const startJokes = () => {
-    const postElement = document.querySelector(".jokes");
+    const jokeElement = document.querySelector(".jokes");
 	getJokes().then(apiJoke => {
-    postElement.innerHTML = `<h3>${apiJoke.joke}</h3>`;
+    jokeElement.innerHTML = `<h3>${apiJoke.joke}</h3>`;
     })
 }
 
 var btn = document.getElementById("jokes-btn");
 btn.addEventListener("click", startJokes);
+
+// end dadjokes section *********************
+
+
+// listens for click anywhere in main (.giffygram)
+
+// const handleGiffyClick = (event) => {
+//     console.log("what was clicked", event)
+//     if (event.target.id === "logout") {
+//         console.log("You clicked on logout")
+//     } else if (event.target.id === "directMessageIcon") {
+//         console.log("You clicked on message icon")
+//     }
+// }
+
+// const applicationElement = document.querySelector(".giffygram");
+// applicationElement.addEventListener("click", handleGiffyClick)
+
+// applicationElement.addEventListener("click", event => {
+// 	if (event.target.id === "logout"){
+// 		console.log("You clicked on logout")
+// 	} else if (event.target.id === "directMessageIcon") {
+//         console.log("You clicked on message icon")
+//     }
+// })
 

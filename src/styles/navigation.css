@@ -83,17 +83,30 @@
     background-color: white;
     border: 3px solid lightgray;
     border-radius: 15px;
-    padding: 10px 10px;
+    padding: 10px 15px;
 }
 
 .navigation__logout button {
-    border: 0px;
     background-color: transparent;
+    border: 0px;
 }
 
-.fakelink {
-    /* font-size: 24px;
+.navigation__logout:hover {
+    background-color: rgb(235, 235, 235)
+}
+
+/* .navigation__logout.fakelink:hover{
+    background-color: powderblue;
+    font-size: 24px;
     font-weight: bold;
     color: rgb(124, 212, 223);
-    text-decoration: none; */
+    text-decoration: none;    */
 }
+
+/* .fakelink:hover {
+    background-color: powderblue;
+    font-size: 24px;
+    font-weight: bold;
+    color: rgb(124, 212, 223);
+    text-decoration: none;
+} */
