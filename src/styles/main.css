@@ -60,21 +60,23 @@ header {
 .jokes-btn {
     align-self: center;
     width: 300px;
-
-    font-weight: 600;
+    font-size: 22px;
+    font-weight: bolder;
+    color: rgb(124, 212, 223);
     background-color: white;
-    border: 3px solid powderblue;
+    border: 3px solid lightgray;
     border-radius: 15px;
     padding: 10px 0px;
     margin: 20px 0px;
-
-    /* text-align: center;
-    background-color: pink;
-    border: 3px solid PaleVioletRed;
+    /* font-size: 22px;
+    font-weight: bolder;
+    white-space: nowrap;
+    min-width: 300px;
+    color: rgb(124, 212, 223);
+    background-color: white;
+    border: 3px solid lightgray;
     border-radius: 15px;
-    font-weight: 600;
-    padding: 10px;
-    margin: 20px 0px; */
+    padding: 5px; */
 }
 
 .jokes {
@@ -83,6 +85,10 @@ header {
     width: 500px;
     white-space: wrap;
 }
+
+.the-jokes:hover .jokes-btn {
+    background-color: rgb(249, 249, 249);
+  }
 /* end of dadjokes */
 
 /* start of post styling */

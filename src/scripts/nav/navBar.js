@@ -1,7 +1,7 @@
 export const navBar = () => {
     return `
         <nav class="navigation">
-            <div class="navigation__left navigation__icon">
+            <div id="jar" class="navigation__left navigation__icon">
                 <img src="./images/giffylogo.png" alt="Giffygram logo" />
             </div>
             <div class="navigation__left navigation__name">

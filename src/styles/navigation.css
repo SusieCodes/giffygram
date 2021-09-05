@@ -20,7 +20,7 @@
 }
 
 .navigation__left {
-    text-align: left;
+    text-align: right;
     padding-left: 10px;
     margin: auto auto;
 }
@@ -38,7 +38,7 @@
 
 .navigation__icon img {
     width: 125px;
-    text-align: left;
+    text-align: right;
     margin: 5px;
 }
 
@@ -92,21 +92,8 @@
 }
 
 .navigation__logout:hover {
-    background-color: rgb(235, 235, 235)
+    background-color: rgb(235, 235, 235);
 }
 
-/* .navigation__logout.fakelink:hover{
-    background-color: powderblue;
-    font-size: 24px;
-    font-weight: bold;
-    color: rgb(124, 212, 223);
-    text-decoration: none;    */
-}
 
-/* .fakelink:hover {
-    background-color: powderblue;
-    font-size: 24px;
-    font-weight: bold;
-    color: rgb(124, 212, 223);
-    text-decoration: none;
-} */
+

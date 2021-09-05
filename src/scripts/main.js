@@ -67,17 +67,17 @@ btn.addEventListener("click", startJokes);
 
 // listens for click anywhere in main (.giffygram)
 
-// const handleGiffyClick = (event) => {
-//     console.log("what was clicked", event)
-//     if (event.target.id === "logout") {
-//         console.log("You clicked on logout")
-//     } else if (event.target.id === "directMessageIcon") {
-//         console.log("You clicked on message icon")
-//     }
-// }
+const handleGiffyClick = (event) => {
+    console.log("what was clicked", event)
+    if (event.target.id === "logout") {
+        console.log("You clicked on logout")
+    } else if (event.target.id === "directMessageIcon") {
+        console.log("You clicked on message icon")
+    }
+}
 
-// const applicationElement = document.querySelector(".giffygram");
-// applicationElement.addEventListener("click", handleGiffyClick)
+const applicationElement = document.querySelector(".giffygram");
+applicationElement.addEventListener("click", handleGiffyClick)
 
 // applicationElement.addEventListener("click", event => {
 // 	if (event.target.id === "logout"){
@@ -87,3 +87,27 @@ btn.addEventListener("click", startJokes);
 //     }
 // })
 
+const chooseYear = (event) => {
+    console.log("what was clicked", event)
+    if (event.target.id === "logout") {
+        console.log("You clicked on logout")
+    } else if (event.target.id === "directMessageIcon") {
+        console.log("You clicked on message icon")
+    }
+}
+
+const showPostByYear = () => {
+	const yearElement = document.querySelector(".postList");
+	getPosts().then((yearPosts) => {
+		yearElement.innerHTML = postList(yearPosts);
+	})
+}
+
+
+dropElement.addEventListener("click", event => {
+    if (event.target.id === "seventeen") {
+      const yearAsNumber = parseInt(event.target.value)
+  
+      console.log(`User wants to see posts since ${yearAsNumber}`)
+    }
+  })

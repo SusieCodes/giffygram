@@ -99,7 +99,7 @@
   /* padding-top: 30px; */
 }
 .menu-content {
-  display: none;
+  display: none; /* keeps dropup hidden until hovered */
   position: absolute;
   bottom: 50px;
   background-color: whitesmoke;
@@ -117,9 +117,12 @@
 .links:hover {
   background-color: powderblue;
 }
+
+/* this is what makes the dropup menu appear */
 .dropup-menu:hover .menu-content {
   display: block;
 }
+
 .dropup-menu:hover .menu-btn {
   background-color: rgb(235, 235, 235);
 }
