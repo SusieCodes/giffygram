@@ -2,7 +2,7 @@ import { getUsers, getPosts, getLoggedInUser } from "./data/dataManager.js";
 import { getJokes } from "./data/dadJoke.js";
 import { navBar } from "./nav/navBar.js";
 import { Footer } from "./nav/footer.js";
-import { postList, seventeenList, eighteenList, nineteenList, twentyList, twentyOneList } from "./feed/postList.js";
+import { postList, yearList } from "./feed/postList.js";
 
 const allUsers = getUsers()
 .then(apiUsers => {
@@ -35,40 +35,48 @@ const showPostList = () => {
 	})
 }
 
-const showTwentyOne = () => {
+const showYearList = (yearClicked) => {
 	const yearElement = document.querySelector(".postList");
 	getPosts().then((allPosts) => {
-		yearElement.innerHTML = twentyOneList(allPosts);
+
+		yearElement.innerHTML = yearList(allPosts, yearClicked);
 	})
 }
 
-const showTwenty = () => {
-	const yearElement = document.querySelector(".postList");
-	getPosts().then((allPosts) => {
-		yearElement.innerHTML = twentyList(allPosts);
-	})
-}
+// const showTwentyOne = () => {
+// 	const yearElement = document.querySelector(".postList");
+// 	getPosts().then((allPosts) => {
+// 		yearElement.innerHTML = yearList(allPosts, 2021);
+// 	})
+// }
 
-const showNineteen = () => {
-	const yearElement = document.querySelector(".postList");
-	getPosts().then((allPosts) => {
-		yearElement.innerHTML = nineteenList(allPosts);
-	})
-}
+// const showTwenty = () => {
+// 	const yearElement = document.querySelector(".postList");
+// 	getPosts().then((allPosts) => {
+// 		yearElement.innerHTML = twentyList(allPosts, 2020);
+// 	})
+// }
 
-const showEighteen = () => {
-	const yearElement = document.querySelector(".postList");
-	getPosts().then((allPosts) => {
-		yearElement.innerHTML = eighteenList(allPosts);
-	})
-}
+// const showNineteen = () => {
+// 	const yearElement = document.querySelector(".postList");
+// 	getPosts().then((allPosts) => {
+// 		yearElement.innerHTML = nineteenList(allPosts, 2019);
+// 	})
+// }
 
-const showSeventeen = () => {
-	const yearElement = document.querySelector(".postList");
-	getPosts().then((allPosts) => {
-		yearElement.innerHTML = seventeenList(allPosts);
-	})
-}
+// const showEighteen = () => {
+// 	const yearElement = document.querySelector(".postList");
+// 	getPosts().then((allPosts) => {
+// 		yearElement.innerHTML = eighteenList(allPosts, 2018);
+// 	})
+// }
+
+// const showSeventeen = () => {
+// 	const yearElement = document.querySelector(".postList");
+// 	getPosts().then((allPosts) => {
+// 		yearElement.innerHTML = seventeenList(allPosts, 2017);
+// 	})
+// }
 
 const showFooter = () => {
     const navElement = document.querySelector("footer");
@@ -101,6 +109,25 @@ btn.addEventListener("click", startJokes);
 
 // listens for click anywhere in main (.giffygram)
 
+// const handleGiffyClick = (event) => {
+//     console.log("what was clicked", event)
+//     if (event.target.id === "logout") {
+//         console.log("You clicked on logout")
+//     } else if (event.target.id === "directMessageIcon") {
+//         console.log("You clicked on message icon")
+//     } else if (event.target.id === "twentyone") {
+//         showTwentyOne();   
+//     } else if (event.target.id === "twenty") {
+//         showTwenty();   
+//     } else if (event.target.id === "nineteen") {
+//         showNineteen();   
+//     } else if (event.target.id === "eighteen") {
+//         showEighteen();   
+//     } else if (event.target.id === "seventeen") {
+//         showSeventeen();   
+//     }
+// }
+
 const handleGiffyClick = (event) => {
     console.log("what was clicked", event)
     if (event.target.id === "logout") {
@@ -108,15 +135,15 @@ const handleGiffyClick = (event) => {
     } else if (event.target.id === "directMessageIcon") {
         console.log("You clicked on message icon")
     } else if (event.target.id === "twentyone") {
-        showTwentyOne();   
+        showYearList(2021);   
     } else if (event.target.id === "twenty") {
-        showTwenty();   
+        showYearList(2020);   
     } else if (event.target.id === "nineteen") {
-        showNineteen();   
+        showYearList(2019);   
     } else if (event.target.id === "eighteen") {
-        showEighteen();   
+        showYearList(2018);   
     } else if (event.target.id === "seventeen") {
-        showSeventeen();   
+        showYearList(2017);   
     }
 }
 
