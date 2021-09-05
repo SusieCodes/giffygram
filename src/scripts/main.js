@@ -2,8 +2,7 @@ import { getUsers, getPosts, getLoggedInUser } from "./data/dataManager.js";
 import { getJokes } from "./data/dadJoke.js";
 import { navBar } from "./nav/navBar.js";
 import { Footer } from "./nav/footer.js";
-import { postList } from "./feed/postList.js";
-
+import { postList, seventeenList, eighteenList, nineteenList, twentyList, twentyOneList } from "./feed/postList.js";
 
 const allUsers = getUsers()
 .then(apiUsers => {
@@ -33,6 +32,41 @@ const showPostList = () => {
 	const postElement = document.querySelector(".postList");
 	getPosts().then((allPosts) => {
 		postElement.innerHTML = postList(allPosts);
+	})
+}
+
+const showTwentyOne = () => {
+	const yearElement = document.querySelector(".postList");
+	getPosts().then((allPosts) => {
+		yearElement.innerHTML = twentyOneList(allPosts);
+	})
+}
+
+const showTwenty = () => {
+	const yearElement = document.querySelector(".postList");
+	getPosts().then((allPosts) => {
+		yearElement.innerHTML = twentyList(allPosts);
+	})
+}
+
+const showNineteen = () => {
+	const yearElement = document.querySelector(".postList");
+	getPosts().then((allPosts) => {
+		yearElement.innerHTML = nineteenList(allPosts);
+	})
+}
+
+const showEighteen = () => {
+	const yearElement = document.querySelector(".postList");
+	getPosts().then((allPosts) => {
+		yearElement.innerHTML = eighteenList(allPosts);
+	})
+}
+
+const showSeventeen = () => {
+	const yearElement = document.querySelector(".postList");
+	getPosts().then((allPosts) => {
+		yearElement.innerHTML = seventeenList(allPosts);
 	})
 }
 
@@ -73,6 +107,16 @@ const handleGiffyClick = (event) => {
         console.log("You clicked on logout")
     } else if (event.target.id === "directMessageIcon") {
         console.log("You clicked on message icon")
+    } else if (event.target.id === "twentyone") {
+        showTwentyOne();   
+    } else if (event.target.id === "twenty") {
+        showTwenty();   
+    } else if (event.target.id === "nineteen") {
+        showNineteen();   
+    } else if (event.target.id === "eighteen") {
+        showEighteen();   
+    } else if (event.target.id === "seventeen") {
+        showSeventeen();   
     }
 }
 
@@ -87,27 +131,39 @@ applicationElement.addEventListener("click", handleGiffyClick)
 //     }
 // })
 
-const chooseYear = (event) => {
-    console.log("what was clicked", event)
-    if (event.target.id === "logout") {
-        console.log("You clicked on logout")
-    } else if (event.target.id === "directMessageIcon") {
-        console.log("You clicked on message icon")
-    }
-}
+// in the middle of rewriting this code from above
+// const chooseYear = (event) => {
+//     console.log("what was clicked", event)
+//     if (event.target.id === "logout") {
+//         console.log("You clicked on logout")
+//     } else if (event.target.id === "directMessageIcon") {
+//         console.log("You clicked on message icon")
+//     }
+// }
 
-const showPostByYear = () => {
-	const yearElement = document.querySelector(".postList");
-	getPosts().then((yearPosts) => {
-		yearElement.innerHTML = postList(yearPosts);
-	})
-}
+// rewriting showPostList from above
+// const showTwentyOne = () => {
+// 	const yearElement = document.querySelector(".postList");
+// 	getPosts().then((yearPosts) => {
+// 		yearElement.innerHTML = twentyOneList(yearPosts);
+// 	})
+// }
+
+// const dropElement = document.querySelector("#twentyone");
+// dropElement.addEventListener("click", showYearList);
 
 
-dropElement.addEventListener("click", event => {
-    if (event.target.id === "seventeen") {
-      const yearAsNumber = parseInt(event.target.value)
-  
-      console.log(`User wants to see posts since ${yearAsNumber}`)
-    }
-  })
+
+
+
+// event => {
+//     if (event.target.id === "twentyone") {
+//         console.log("you clicked on twentyone")
+//         const showTwentyOne = () => {
+//             const yearElement = document.querySelector(".postList");
+//             getPosts().then((yearPosts) => {
+//                 yearElement.innerHTML = twentyOneList(yearPosts);
+//             })
+//         }
+//     }
+//   })

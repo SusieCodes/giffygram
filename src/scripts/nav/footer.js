@@ -19,7 +19,7 @@ export const Footer = () => {
                          
                             <button class="menu-btn">Choose</button>
                             <div class="menu-content">
-                            <a id="twentyone" class="links" href="#">2021</a>
+                            <div id="twentyone" class="links">2021</div>
                             <a id="twenty" class="links" href="#">2020</a>
                             <a id="nineteen" class="links" href="#">2019</a>
                             <a id="eighteen" class="links" href="#">2018</a>
