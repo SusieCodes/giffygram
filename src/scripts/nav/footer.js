@@ -17,13 +17,13 @@ export const Footer = () => {
                 <div class="col2">
                     <div class="dropup-menu">
                          
-                            <button class="menu-btn">Years</button>
+                            <button class="menu-btn">Choose</button>
                             <div class="menu-content">
-                            <a class="links" href="#">2021</a>
-                            <a class="links" href="#">2020</a>
-                            <a class="links" href="#">2019</a>
-                            <a class="links" href="#">2018</a>
-                            <a class="links" href="#">2017</a>
+                            <div id="twentyone" class="links">2021</div>
+                            <a id="twenty" class="links" href="#">2020</a>
+                            <a id="nineteen" class="links" href="#">2019</a>
+                            <a id="eighteen" class="links" href="#">2018</a>
+                            <a id="seventeen" class="links" href="#">2017</a>
                             </div> <!-- closes menu-content -->
             
                     </div> <!-- closes dropup-menu -->

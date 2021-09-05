@@ -20,7 +20,7 @@
 }
 
 .navigation__left {
-    text-align: left;
+    text-align: right;
     padding-left: 10px;
     margin: auto auto;
 }
@@ -38,7 +38,7 @@
 
 .navigation__icon img {
     width: 125px;
-    text-align: left;
+    text-align: right;
     margin: 5px;
 }
 
@@ -83,17 +83,17 @@
     background-color: white;
     border: 3px solid lightgray;
     border-radius: 15px;
-    padding: 10px 10px;
+    padding: 10px 15px;
 }
 
 .navigation__logout button {
-    border: 0px;
     background-color: transparent;
+    border: 0px;
 }
 
-.fakelink {
-    /* font-size: 24px;
-    font-weight: bold;
-    color: rgb(124, 212, 223);
-    text-decoration: none; */
+.navigation__logout:hover {
+    background-color: rgb(235, 235, 235);
 }
+
+
+
