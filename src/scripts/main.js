@@ -86,8 +86,8 @@ const handleGiffyClick = (event) => {
 const applicationElement = document.querySelector(".giffygram");
 applicationElement.addEventListener("click", handleGiffyClick)
 
+const editElement = document.getElementById("postBtns");
 editElement.addEventListener("click", (event) => {
-	
 	if (event.target.id.startsWith("edit")){
 		console.log("post clicked", event.target.id.split("--"))
 		console.log("the id is", event.target.id.split("--")[1])

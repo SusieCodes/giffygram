@@ -20,10 +20,10 @@ export const Post = (postObject) => {
             <div class="details__user"> <a href="#"> User #${postObject.userId}</a> on </div>
             <div class="details__when"> ${showDate}</div>
         </div> <!-- closes details -->
-        <div>
+        <div id="postBtns">
         <button id="edit--${postObject.id}" class="post-btn">EDIT</button>
         <button id="delete--${postObject.id}" class="post-btn">DELETE</button>
-        </div>
+        </div> <!-- closes postBtns -->
       </section>
     `
   }
