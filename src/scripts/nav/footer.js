@@ -37,8 +37,7 @@ export const Footer = () => {
 }
 
 export const changeBtn = (year) => {
-	const btnElement = document.querySelector("#yearChoice");
-	btnElement.innerHTML = `
+	document.getElementById("yearChoice").innerHTML = `
         <button class="menu-btn">${year}</button>
         <div class="menu-content">
         <div id="twentyone" class="links">2021</div>
@@ -47,7 +46,6 @@ export const changeBtn = (year) => {
         <a id="eighteen" class="links" href="#">2018</a>
         <a id="seventeen" class="links" href="#">2017</a>
         </div> <!-- closes menu-content -->
-        `
-        const titleElement = document.querySelector("#title");
-        titleElement.innerHTML = `<h3 class="center">Giffys from ${year}</h3>`
+        `;
+        document.getElementById("title").innerHTML = `<h3 class="center">Giffys from ${year}</h3>`;
 }
