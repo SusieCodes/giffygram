@@ -31,7 +31,7 @@ header {
     flex-direction: column;
     justify-content: center;
     text-align: center;
-    background-image: URL("../images/tiledpeanuts.png");
+    background-image: URL("../images/peanutbg.png");
 }
 
 .flex-container {
@@ -40,11 +40,25 @@ header {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    margin-top: 152px;
+    margin-top: 172px;
     margin-bottom: 160px;
-    background-color: white;
-    border-left: 2px solid powderblue;
-    border-right: 2px solid powderblue;
+    /* background-color: white; */
+    /* border-left: 2px solid powderblue; */
+    /* border-right: 2px solid powderblue; */
+}
+
+#title {
+    align-self: center;
+    width: 560px;
+    background-color: powderblue;
+    border-radius: 15px;
+    padding: 0px;
+    margin: 30px;
+}
+
+#title h3 {
+    padding: 10px;
+    margin: 0px;
 }
 
 .center {
