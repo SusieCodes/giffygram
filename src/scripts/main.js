@@ -10,19 +10,6 @@ const allUsers = getUsers()
 })
 console.log("All users: ", allUsers);
 
-// this does same as above - it just tests if its working ok for now
-
-// getUsers()
-// .then(data => {
-//     console.log("User Data", data)
-// })
-
-// const allPosts = getPosts()
-// .then(apiPosts => {
-//     console.log("now we can console the posts", apiPosts)
-// })
-// console.log("All posts: ", allPosts);
-
 const showNavBar = () => {
     const navElement = document.querySelector("header");
 	navElement.innerHTML = navBar();
@@ -99,3 +86,10 @@ const handleGiffyClick = (event) => {
 const applicationElement = document.querySelector(".giffygram");
 applicationElement.addEventListener("click", handleGiffyClick)
 
+const editElement = document.getElementById("postBtns");
+editElement.addEventListener("click", (event) => {
+	if (event.target.id.startsWith("edit")){
+		console.log("post clicked", event.target.id.split("--"))
+		console.log("the id is", event.target.id.split("--")[1])
+	}
+})

@@ -31,16 +31,20 @@ header {
     flex-direction: column;
     justify-content: center;
     text-align: center;
+    background-image: URL("../images/tiledpeanuts.png");
 }
 
 .flex-container {
-    width: 80%;
+    width: 68%;
     align-self: center;
     display: flex;
     flex-direction: column;
     justify-content: center;
     margin-top: 152px;
-    margin-bottom: 175px;
+    margin-bottom: 160px;
+    background-color: white;
+    border-left: 2px solid powderblue;
+    border-right: 2px solid powderblue;
 }
 
 .center {
@@ -89,6 +93,7 @@ header {
 /* start of post styling */
 .postList {
     align-self: center;
+    margin-bottom: 20px;
 }
 
 .post {

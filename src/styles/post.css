@@ -1,3 +1,17 @@
+.post-btn {
+    font-size: 16px;
+    font-weight: bolder;
+    white-space: nowrap;
+    color: rgb(124, 212, 223);
+    background-color: white;
+    border: 3px solid lightgray;
+    border-radius: 15px;
+    padding: 5px 10px;
+    margin: 15px 5px 0px 5px;
+}
+
+
+
 .miniMode {
     padding: 1rem;
     margin: 0 25%;
