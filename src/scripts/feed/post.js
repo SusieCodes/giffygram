@@ -8,7 +8,8 @@ export const Post = (postObject) => {
     const showDate = formatDate(postObject.timestamp);
     return `
       <section class="post">
-            <h2 class="post__title"> ${postObject.title} </h2>
+
+        <h2 class="post__title"> ${postObject.title} </h2>
         <img class="post__image" src="${postObject.imageURL}" />
 
         <div class="details">
@@ -20,10 +21,12 @@ export const Post = (postObject) => {
             <div class="details__user"> <a href="#"> User #${postObject.userId}</a> on </div>
             <div class="details__when"> ${showDate}</div>
         </div> <!-- closes details -->
+
         <div id="postBtns">
         <button id="edit--${postObject.id}" class="post-btn">EDIT</button>
         <button id="delete--${postObject.id}" class="post-btn">DELETE</button>
         </div> <!-- closes postBtns -->
+
       </section>
     `
   }

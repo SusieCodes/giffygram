@@ -58,7 +58,6 @@ btn.addEventListener("click", startJokes);
 // end dadjokes section *********************
 
 const handleGiffyClick = (event) => {
-    console.log("what was clicked", event)
     if (event.target.id === "logout") {
         console.log("You clicked on logout")
     } else if (event.target.id === "pen") {
@@ -86,10 +85,12 @@ const handleGiffyClick = (event) => {
 const applicationElement = document.querySelector(".giffygram");
 applicationElement.addEventListener("click", handleGiffyClick)
 
-const editElement = document.getElementById("postBtns");
-editElement.addEventListener("click", (event) => {
+applicationElement.addEventListener("click", (event) => {
 	if (event.target.id.startsWith("edit")){
-		console.log("post clicked", event.target.id.split("--"))
+		console.log("post clicked to edit", event.target.id.split("--"))
+		console.log("the id is", event.target.id.split("--")[1])
+	} else if (event.target.id.startsWith("delete")){
+		console.log("post clicked to delete", event.target.id.split("--"))
 		console.log("the id is", event.target.id.split("--")[1])
 	}
 })
