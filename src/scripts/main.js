@@ -1,5 +1,5 @@
 import { getUsers, getPosts, getLoggedInUser } from "./data/dataManager.js";
-import { getJokes } from "./data/dadJoke.js";
+// import { getJokes } from "./data/dadJoke.js";
 import { navBar } from "./nav/navBar.js";
 import { Footer, changeBtn } from "./nav/footer.js";
 import { postList, yearList } from "./feed/postList.js";
@@ -94,3 +94,24 @@ applicationElement.addEventListener("click", (event) => {
 		console.log("the id is", event.target.id.split("--")[1])
 	}
 })
+
+applicationElement.addEventListener("change", event => {
+    if (event.target.id === "yearSelection") {
+      const yearAsNumber = parseInt(event.target.value)
+      console.log(`User wants to see posts since ${yearAsNumber}`)
+      //invoke a filter function passing the year as an argument
+      showFilteredPosts(yearAsNumber);
+    }
+  })
+  
+  const showFilteredPosts = (year) => {
+    const epoch = Date.parse(`01/01/${year}`);
+    // get a copy of the post collection and filter the data
+    const filteredData = usePostCollection().filter(singlePost => {
+      if (singlePost.timestamp >= epoch) {
+        return singlePost
+      }
+    })
+    const postElement = document.querySelector(".postList");
+    postElement.innerHTML = PostList(filteredData);
+  }

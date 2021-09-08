@@ -20,10 +20,11 @@ export const Footer = () => {
                             <button class="menu-btn">Choose</button>
                             <div class="menu-content">
                             <div id="twentyone" class="links">2021</div>
-                            <a id="twenty" class="links" href="#">2020</a>
-                            <a id="nineteen" class="links" href="#">2019</a>
-                            <a id="eighteen" class="links" href="#">2018</a>
-                            <a id="seventeen" class="links" href="#">2017</a>
+                            <a id="twenty" class="links">2020</a>
+                            <a id="nineteen" class="links">2019</a>
+                            <a id="eighteen" class="links">2018</a>
+                            <a id="seventeen" class="links">2017</a>
+                            <div id="all" class="links">Show All</div>
                             </div> <!-- closes menu-content -->
             
                     </div> <!-- closes yearChoice dropup-menu -->
@@ -41,10 +42,11 @@ export const changeBtn = (year) => {
         <button class="menu-btn">${year}</button>
         <div class="menu-content">
         <div id="twentyone" class="links">2021</div>
-        <a id="twenty" class="links" href="#">2020</a>
-        <a id="nineteen" class="links" href="#">2019</a>
-        <a id="eighteen" class="links" href="#">2018</a>
-        <a id="seventeen" class="links" href="#">2017</a>
+        <div id="twenty" class="links">2020</div>
+        <div id="nineteen" class="links">2019</div>
+        <div id="eighteen" class="links">2018</div>
+        <div id="seventeen" class="links">2017</div>
+        <div id="all" class="links">Show All</div>
         </div> <!-- closes menu-content -->
         `;
         document.getElementById("title").innerHTML = `<h3 class="center">Giffys from ${year}</h3>`;

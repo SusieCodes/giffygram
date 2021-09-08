@@ -11,6 +11,11 @@ export const getPosts = () => {
     })
 }
 
+let postCollection = [];
+export const usePostCollection = () => {
+    return [...postCollection];
+}
+
 // not exported because it is only called from within this file
 const loggedInUser = {
     "id": "1",
