@@ -2,17 +2,32 @@
 @import "footer.css";
 @import "feed.css";
 @import "post.css";
-/* @import url("https://fonts.googleapis.com/css?family=Comfortaa|Patua+One"); */
 
 /* Typography */
 
-body, button, input, select, textarea {
+body {
     color: #404040;
     font-family: "Poppins", sans-serif;
     font-size: 20px;
     padding: 0px;
     margin: 0px;
     text-align: center;
+}
+
+button {
+    color: #404040;
+    font-family: "Poppins", sans-serif;
+    font-size: 20px;
+    text-align: center;
+    padding: 0px;
+}
+
+input, select, textarea {
+    color: #404040;
+    font-family: "Poppins", sans-serif;
+    font-size: 20px;
+    text-align: left;
+    padding: 0px;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -23,7 +38,7 @@ h1, h2, h3, h4, h5, h6 {
 header {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    margin: auto;
 }
 
 .giffygram {

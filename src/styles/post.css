@@ -1,3 +1,85 @@
+.entry-form {
+display: flex;
+flex-direction: row;
+justify-content: center;
+}
+
+.new-post {
+    width: 500px;
+    text-align: center;
+    padding: 0px 30px 20px 30px;
+    margin: 30px 0px 20px 0px;
+    background-color: #EDF9FB;
+    border-radius: 15px;
+}
+
+.add-post h2 {
+    font-size: 28px;
+    font-weight: 600;
+    text-align: center;
+    padding: 0px;
+    margin: 15px;
+}
+
+.entry-flex {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0px;
+    margin: 0px;
+}
+
+.new-entry-title {
+    width: 490px;
+    text-align: left;
+}
+
+.new-entry-url {
+    width: 490px;
+    text-align: left;
+}
+
+.new-entry-desc {
+    width: 492px;
+    text-align: left;
+}
+
+.new-post__input {
+    width: 100%;
+    text-align: left;
+    padding-left: 5px;
+    margin: 10px 0px 0px 0px;
+}
+
+/* submit & cancel buttons */
+.new-entry-btns {
+    text-align: center;
+}
+
+.post-submit {
+    font-size: 16px;
+    font-weight: bolder;
+    white-space: nowrap;
+    color: rgb(124, 212, 223);
+    background-color: white;
+    border: 3px solid lightgray;
+    border-radius: 15px;
+    padding: 5px 10px;
+    margin: 15px 5px 0px 5px;
+}
+
+.post-cancel {
+    font-size: 16px;
+    font-weight: bolder;
+    white-space: nowrap;
+    color: rgb(124, 212, 223);
+    background-color: white;
+    border: 3px solid lightgray;
+    border-radius: 15px;
+    padding: 5px 10px;
+    margin: 15px 5px 0px 5px;
+}
+
 .post-btn {
     font-size: 16px;
     font-weight: bolder;
@@ -12,16 +94,16 @@
 
 
 
-.miniMode {
+/* .miniMode {
     padding: 1rem;
     margin: 0 25%;
     border: 1px dashed slategrey;
     border-radius: 0.5rem;
     text-align: center;
     cursor: pointer;
-}
+} */
 
-.newPost {
+/* .newPost {
     margin: 0 25%;
 }
 
@@ -33,7 +115,7 @@
 .newPost__description {
     width: 100%;
     height: 5em;
-}
+} */
 
 .newPost__drop {
     padding: 1rem;
