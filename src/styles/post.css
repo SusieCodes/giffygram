@@ -25,7 +25,6 @@ justify-content: center;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    border: 1px dotted black;
     padding: 0px;
     margin: 0px;
 }
@@ -33,16 +32,11 @@ justify-content: center;
 .new-entry-title {
     width: 490px;
     text-align: left;
-    /* margin: 0px 10px; */
-    /* border: 1px solid red; */
 }
 
 .new-entry-url {
     width: 490px;
     text-align: left;
-    /* margin: 0px 10px; */
-    /* border: 1px solid red; */
-
 }
 
 .new-entry-desc {
@@ -56,11 +50,6 @@ justify-content: center;
     padding-left: 5px;
     margin: 10px 0px 0px 0px;
 }
-
-/* .new-post__description {
-    width: 100%;
-    text-align: left;
-} */
 
 /* submit & cancel buttons */
 .new-entry-btns {
