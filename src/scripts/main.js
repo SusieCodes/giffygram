@@ -19,14 +19,14 @@ const showNavBar = () => {
 const showPostList = () => {
 	const postElement = document.querySelector(".postList");
 	getPosts().then((allPosts) => {
-		postElement.innerHTML = postList(allPosts.reverse());
+		postElement.innerHTML = postList(allPosts);
 	})
 }
 
 const showYearList = (yearClicked) => {
 	const yearElement = document.querySelector(".postList");
 	getPosts().then((allPosts) => {
-		yearElement.innerHTML = yearList(allPosts.reverse(), yearClicked);
+		yearElement.innerHTML = yearList(allPosts, yearClicked);
 	})
 }
 
@@ -116,6 +116,7 @@ dropSelectElement.addEventListener("change", event => {
   
   const showFilteredPosts = (year) => {
     const epoch = Date.parse(`01/01/${year}`);
+    console.log("epoch is saved as: ", epoch)
     // get a copy of the post collection and filter the data
     const filteredData = usePostCollection().filter(singlePost => {
       if (singlePost.timestamp >= epoch) {
@@ -123,7 +124,8 @@ dropSelectElement.addEventListener("change", event => {
       }
     })
     const postElement = document.querySelector(".postList");
-    postElement.innerHTML = PostList(filteredData);
+    console.log("filterData is saved as: ", filteredData)
+    postElement.innerHTML = postList(filteredData);
   }
 
 

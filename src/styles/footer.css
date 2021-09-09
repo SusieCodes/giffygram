@@ -20,7 +20,7 @@
 .footer__left img {
   width: 125px;
   text-align: left;
-  padding: auto 0px;
+  padding-left:30px;
   margin: auto 0px;
   vertical-align: middle;
 }

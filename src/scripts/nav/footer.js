@@ -28,7 +28,7 @@ export const Footer = () => {
 
             <div class="footer__right">
 
-                <div class="col1">Posts since
+                <div class="col1">Posts from
                 </div> <!-- closes col1-->
 
                 <div class="col2">
