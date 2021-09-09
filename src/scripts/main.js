@@ -16,6 +16,11 @@ const showNavBar = () => {
 	navElement.innerHTML = navBar();
 }
 
+const showPostEntry = () => { 
+    const entryElement = document.querySelector(".entry-form");
+    entryElement.innerHTML = postEntry();
+  }
+
 const showPostList = () => {
 	const postElement = document.querySelector(".postList");
 	getPosts().then((allPosts) => {
@@ -37,6 +42,7 @@ const showFooter = () => {
 
 const startGiffyGram = () => {
     showNavBar();
+    showPostEntry();
     showPostList();
     showFooter();
 }
@@ -159,5 +165,6 @@ dropSelectElement.addEventListener("change", event => {
 
     }
   })
+
 
   

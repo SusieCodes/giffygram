@@ -9,7 +9,7 @@ export const Post = (postObject) => {
     return `
       <section class="post">
 
-        <h2 class="post__title"> ${postObject.title} </h2>
+        <h3 class="post__title"> ${postObject.title} </h3>
         <img class="post__image" src="${postObject.imageURL}" />
 
         <div class="details">
