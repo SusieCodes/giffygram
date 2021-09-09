@@ -1,47 +1,51 @@
 .footer {
   display: flex;
   flex-direction: row;
-  flex-wrap: nowrap;
-  justify-content: center;
+  justify-content: space-between;
   border-top: 3px solid lightblue;
-  padding: 0px;
+  padding: 0px 10px;
   position: fixed;
   left: 0;
   right: 0;
   bottom: 0;
   background-color: whitesmoke;
-  /* margin-top: 50px; */
 }
 
 .footer__left {
-  /* align-self: flex-end; */
-  flex-basis: 20%;
   text-align: left;
   padding-top: 17px;
+  margin: 0px;
 }
 
 .footer__left img {
   width: 125px;
   text-align: left;
-  padding: 0px;
+  padding: auto 0px;
   margin: auto 0px;
   vertical-align: middle;
 }
  
 .footer__middle {
-  flex-basis: 50%;
-  text-align: center;
+margin: auto auto;
+text-align: center;
 } 
 
-.footer__right {
-  flex-basis: 20%;
-  text-align: right;
-  margin: auto 0px;
+.example__menu {
+  text-align: center;
+  margin: auto auto;
+  white-space: nowrap;
+}
+
+.drop-text {
+  white-space: nowrap;
+}
+
+.post-count {
+  white-space: nowrap;
 }
 
 .footer__name {
   text-align: center;
-  /* margin-top: 30px; */
 }
 
 .giffy {
@@ -55,16 +59,28 @@
   margin-top: 40px;
 }
 
-.footer-flex {
+.footer__right {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  text-align: right;
+  margin: auto auto;
+  border: 1px solid black;
+}
+
+/* .footer-flex {
   display: flex;
   flex-direction: row;
   justify-content: center;
   padding-top: 40px;
-}
+} */
 
 .col1 {
   text-align: right;
   padding: 10px 10px 0px 0px;
+  white-space: nowrap;
+
 }
 
 .col2 {

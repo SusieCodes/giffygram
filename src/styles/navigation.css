@@ -1,17 +1,14 @@
 .navigation {
     display: flex;
     flex-direction: row;
-    flex-wrap: nowrap;
-    justify-content: space-between;
+    /* flex-wrap: nowrap; */
+    justify-content: space-evenly;
     border-bottom: 3px solid lightblue;
-
     position: fixed;
     left: 0;
     right: 0;
     top: 0;
-
     padding: 10px 10px 5px 10px;
-    width: 100%;
     background-color: whitesmoke;
 }
 
@@ -21,14 +18,13 @@
 
 .navigation__left {
     text-align: right;
-    padding-left: 10px;
-    margin: auto auto;
+    /* padding-left: 10px; */
+    margin: auto 0px;
 }
 
 .navigation__right {
     text-align: right;
-    margin: auto auto;
-}
+    /* margin: auto auto; */}
 
 .navigation__name {
     font-size: 50px;
@@ -39,7 +35,8 @@
 .navigation__icon img {
     width: 125px;
     text-align: right;
-    margin: 5px;
+    margin: auto 0px;
+    padding: auto 0px;
 }
 
 
@@ -84,7 +81,7 @@
     border: 3px solid lightgray;
     border-radius: 15px;
     padding: 10px 15px;
-}
+    margin: auto auto;}
 
 .navigation__logout button {
     background-color: transparent;

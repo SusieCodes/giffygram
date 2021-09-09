@@ -3,27 +3,40 @@ export const getUsers = () => {
     .then(response => response.json())
 }
 
-export const getPosts = () => {
-    return fetch("http://localhost:8088/posts")
-    .then(response => response.json())
-    .then(parsedResponse => {
-        return parsedResponse;
-    })
-}
 
 let postCollection = [];
+
+export const getPosts = () => {
+    return fetch("http://localhost:8088/posts")
+      .then(response => response.json())
+      .then(parsedResponse => {
+        postCollection = parsedResponse
+        return parsedResponse;
+      })
+  }
+
 export const usePostCollection = () => {
     return [...postCollection];
 }
 
-// not exported because it is only called from within this file
-const loggedInUser = {
-    "id": "1",
-    "name": "Susie",
-    "dateJoined": "1630513838389",
-    "email": "susie.stanley3@yahoo.com"
+export const createPost = postObj => {
+    return fetch("http://localhost:8088/posts", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify(postObj).then(response => response.json())
+  })
 }
 
-export const getLoggedInUser = () => {
-	return loggedInUser;
-}
+// not exported because it is only called from within this file
+// const loggedInUser = {
+//     "id": "1",
+//     "name": "Susie",
+//     "dateJoined": "1630513838389",
+//     "email": "susie.stanley3@yahoo.com"
+// }
+
+// export const getLoggedInUser = () => {
+// 	return loggedInUser;
+// }

@@ -9,7 +9,24 @@ export const Footer = () => {
                 <p class="copyright">&copy;2021 Susie Stanley | All Rights Reserved</p>
             </div>
             
-            <div class="footer-flex">
+            <div id="example" class="example__menu">
+
+                <div class="dropmenu__holder">
+                    <span class="drop-text">Posts since </span><select id="yearSelection">
+                        <option>2021</option>
+                        <option>2020</option>
+                        <option>2019</option>
+                        <option>2018</option>
+                        <option>2017</option>
+                        <option>All</option>
+                    </select>
+
+                    <span id="postCount" class="post-count"> = 0</span>
+                </div> <!-- closes dropmenu__holder -->
+
+            </div> <!-- closes example__menu -->            
+
+            <div class="footer__right">
 
                 <div class="col1">Posts since
                 </div> <!-- closes col1-->
@@ -20,11 +37,11 @@ export const Footer = () => {
                             <button class="menu-btn">Choose</button>
                             <div class="menu-content">
                             <div id="twentyone" class="links">2021</div>
-                            <a id="twenty" class="links">2020</a>
-                            <a id="nineteen" class="links">2019</a>
-                            <a id="eighteen" class="links">2018</a>
-                            <a id="seventeen" class="links">2017</a>
-                            <div id="all" class="links">Show All</div>
+                            <div id="twenty" class="links">2020</div>
+                            <div id="nineteen" class="links">2019</div>
+                            <div id="eighteen" class="links">2018</div>
+                            <div id="seventeen" class="links">2017</div>
+                            <div id="all" class="links">All</div>
                             </div> <!-- closes menu-content -->
             
                     </div> <!-- closes yearChoice dropup-menu -->
@@ -33,7 +50,7 @@ export const Footer = () => {
                 <div class="col3"><div> =  &nbsp;</div><div id="postCount">0</div>
                 </div> <!-- closes col3-->
 
-            </div> <!-- closes footer-flex -->
+            </div> <!-- closes footer__right -->
     `
 }
 
@@ -46,8 +63,12 @@ export const changeBtn = (year) => {
         <div id="nineteen" class="links">2019</div>
         <div id="eighteen" class="links">2018</div>
         <div id="seventeen" class="links">2017</div>
-        <div id="all" class="links">Show All</div>
+        <div id="all" class="links">All</div>
         </div> <!-- closes menu-content -->
         `;
+        if (year === "All") {
+        document.getElementById("title").innerHTML = `<h3 class="center">All My Giffys</h3>`    
+        } else {
         document.getElementById("title").innerHTML = `<h3 class="center">Giffys from ${year}</h3>`;
+        }
 }
