@@ -104,7 +104,6 @@ applicationElement.addEventListener("click", (event) => {
 
 // event listener for filtering data based on selection - lesson example
 
-let yearSelected = 2021;
 
 const dropSelectElement = document.querySelector(".example__menu");
 dropSelectElement.addEventListener("change", event => {
