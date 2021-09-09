@@ -66,15 +66,7 @@ text-align: center;
   justify-content: center;
   text-align: right;
   margin: auto auto;
-  border: 1px solid black;
 }
-
-/* .footer-flex {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  padding-top: 40px;
-} */
 
 .col1 {
   text-align: right;
@@ -112,7 +104,6 @@ text-align: center;
 .dropup-menu {
   position: relative;
   display: inline-block;
-  /* padding-top: 30px; */
 }
 .menu-content {
   display: none; /* keeps dropup hidden until hovered */
