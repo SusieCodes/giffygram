@@ -23,6 +23,7 @@ button {
 }
 
 input, select, textarea {
+    width: 100%;
     color: #404040;
     font-family: "Poppins", sans-serif;
     font-size: 20px;
@@ -64,7 +65,7 @@ header {
 
 #title {
     align-self: center;
-    width: 560px;
+    width: 580px;
     background-color: powderblue;
     border-radius: 15px;
     padding: 0px;
@@ -72,7 +73,7 @@ header {
 }
 
 #title h3 {
-    padding: 10px;
+    padding: 10px 0px;
     margin: 0px;
 }
 
@@ -126,16 +127,16 @@ header {
 }
 
 .post {
-    width: 500px;
-    padding: 30px;
-    margin-bottom: 20px;
+    width: 580px;
+    padding: 20px 0px 25px 0px;
+    margin-bottom: 40px;
     background-color: #EDF9FB;
     border-radius: 15px;
 }
 
 .post__title {
     padding: 0px;
-    margin: 0px;
+    margin: 10px 0px;
 }
 
 .post h2 {
@@ -145,43 +146,53 @@ header {
     margin-bottom: 10px;
 }
 
-.post__image {
-    border: 8px solid powderblue;
-    border-radius: 15px;
-    margin: 10px 0px;
+/* post image styling */
+.image-holder {
+    width: 488px;
+    text-align: center;
+    margin: auto;
 }
 
+.post__image {
+    text-align: center;
+    width: 96%;
+    border: 8px solid powderblue;
+    border-radius: 15px;
+    margin: 10px auto;
+}
+/* post image styling ends */
+
+/* details about post */
 .details {
     display: flex;
     flex-direction: row;
 }
 
+/* post description text */
 .details__info {
     font-weight: 100;
     text-align: justify;
-    padding: 0px 20px;
-    margin-bottom: 20px;
+    padding: 10px 40px 20px 38px;
 }
 
+/* "Posted By" field */
 .details__text {
     font-weight: 600;
-    padding-right: 10px;
+    margin-left: 40px;
+    margin-right: 10px;
 }
 
-.details__user {
-    font-weight: 400;
-    padding: 0px;
-}
-
+/* "User #" field */
 .details__user a {
     color: PaleVioletRed;
     font-weight: 400;
     padding: 0px;
+    margin: 0px 5px;
 }
 
 .details__when {
     font-weight: 400;
-    padding-left: 5px;
+    margin-left: 5px;
 }
 
 .actionIcon {

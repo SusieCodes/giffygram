@@ -20,13 +20,14 @@ export const usePostCollection = () => {
 }
 
 export const createPost = postObj => {
+    console.log("createPost has been initiated");
     return fetch("http://localhost:8088/posts", {
         method: "POST",
         headers: {
             "Content-Type": "application/json"
         },
-        body: JSON.stringify(postObj).then(response => response.json())
-  })
+        body: JSON.stringify(postObj)})
+        .then(response => response.json())
 }
 
 // not exported because it is only called from within this file
