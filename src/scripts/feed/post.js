@@ -10,10 +10,12 @@ export const Post = (postObject) => {
       <section class="post">
 
         <h3 class="post__title"> ${postObject.title} </h3>
+        <div class="image-holder">
         <img class="post__image" src="${postObject.imageURL}" />
+        </div> <!-- closes image-holder-->
 
         <div class="details">
-            <div class="details__info"> ${postObject.descript}</div>
+            <div class="details__info"> ${postObject.description}</div>
         </div> <!-- closes details -->
 
         <div class="details">

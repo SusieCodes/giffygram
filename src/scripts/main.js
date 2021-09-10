@@ -24,14 +24,14 @@ const showPostEntry = () => {
 const showPostList = () => {
 	const postElement = document.querySelector(".postList");
 	getPosts().then((allPosts) => {
-		postElement.innerHTML = postList(allPosts);
+		postElement.innerHTML = postList(allPosts.reverse());
 	})
 }
 
 const showYearList = (yearClicked) => {
 	const yearElement = document.querySelector(".postList");
 	getPosts().then((allPosts) => {
-		yearElement.innerHTML = yearList(allPosts, yearClicked);
+		yearElement.innerHTML = yearList(allPosts.reverse(), yearClicked);
 	})
 }
 
@@ -110,30 +110,29 @@ applicationElement.addEventListener("click", (event) => {
 
 // event listener for filtering data based on selection - lesson example
 
-
-const dropSelectElement = document.querySelector(".example__menu");
-dropSelectElement.addEventListener("change", event => {
-    if (event.target.id === "yearSelection") {
-      const yearAsNumber = parseInt(event.target.value)
-      console.log(`User wants to see posts since ${yearAsNumber}`)
-      showFilteredPosts(yearAsNumber);
-    }
-  })
+// const dropSelectElement = document.querySelector(".example__menu");
+// dropSelectElement.addEventListener("change", event => {
+//     if (event.target.id === "yearSelection") {
+//       const yearAsNumber = parseInt(event.target.value)
+//       console.log(`User wants to see posts since ${yearAsNumber}`)
+//       showFilteredPosts(yearAsNumber);
+//     }
+//   })
   
-  const showFilteredPosts = (year) => {
-    const epoch = Date.parse(`01/01/${year}`);
-    console.log("epoch is saved as: ", epoch)
-    // get a copy of the post collection and filter the data
-    const filteredData = usePostCollection().filter(singlePost => {
-      if (singlePost.timestamp >= epoch) {
-        return singlePost
-      }
-    })
-    const postElement = document.querySelector(".postList");
-    console.log("filterData is saved as: ", filteredData)
-    postElement.innerHTML = postList(filteredData);
-  }
-
+//   const showFilteredPosts = (year) => {
+//     const epoch = Date.parse(`01/01/${year}`);
+//     console.log("epoch is saved as: ", epoch)
+//     // get a copy of the post collection and filter the data
+//     const filteredData = usePostCollection().filter(singlePost => {
+//       if (singlePost.timestamp >= epoch) {
+//         return singlePost
+//       }
+//     })
+//     const postElement = document.querySelector(".postList");
+//     console.log("filterData is saved as: ", filteredData)
+//     postElement.innerHTML = postList(filteredData);
+//   }
+// end of school example
 
 //   const formElement = document.querySelector(".newPost");
 
@@ -145,8 +144,8 @@ dropSelectElement.addEventListener("change", event => {
   
   applicationElement.addEventListener("click", event => {
     event.preventDefault();
-    if (event.target.id === "newPost__submit") {
-    //collect the input values into an object to post to the DB
+    console.log("you clicked submit")
+    if (event.target.id === "new-post__submit") {
       const title = document.querySelector("input[name='postTitle']").value
       const url = document.querySelector("input[name='postURL']").value
       const description = document.querySelector("textarea[name='postDescription']").value
@@ -158,11 +157,13 @@ dropSelectElement.addEventListener("change", event => {
           userId: 1,
           timestamp: Date.now()
       }
-  
     createPost(postObject).then(dbResponse => {
-        showPostList()
+        showPostList();
+        showPostEntry();
     });
 
+    } else if (event.target.id === "new-post__cancel") {
+      showPostEntry();
     }
   })
 

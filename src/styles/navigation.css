@@ -1,7 +1,6 @@
 .navigation {
     display: flex;
     flex-direction: row;
-    /* flex-wrap: nowrap; */
     justify-content: space-evenly;
     border-bottom: 3px solid lightblue;
     position: fixed;

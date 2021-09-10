@@ -21,12 +21,12 @@ export const postEntry = () => {
                     name="postURL"
                     class="new-post__input"
                     type="text"
-                    placeholder="URL of gif" />
+                    placeholder="URL of gif " />
             </div> <!-- closes new-entry-url -->
  
             <div class="new-entry-desc">
                 <textarea name="postDescription"
-                    class="new-post__input"
+                    class="new-post__input--desc"
                     placeholder="Tell us about your gif"></textarea>
             </div> <!-- closes new-entry-desc -->
 

@@ -4,11 +4,13 @@ export const Footer = () => {
                 <img id="jar" src="./images/giffylogo.png" alt="Giffygram icon" />
             </div>
 
-            <div class="footer__middle footer__name">
+            <div class="footer__middle">
                 <p class="giffy">Giffygram</p>
-                <p class="copyright">&copy;2021 Susie Stanley | All Rights Reserved</p>
+                <p class="copyright">&copy;2021 Susie Stanley</p>
             </div>
+           
             
+ <!--  this was class example but I used mine instead --         
             <div id="example" class="example__menu">
 
                 <div class="dropmenu__holder">
@@ -22,9 +24,10 @@ export const Footer = () => {
                     </select>
 
                     <span id="postCount" class="post-count"> = 0</span>
-                </div> <!-- closes dropmenu__holder -->
+                </div>
 
-            </div> <!-- closes example__menu -->            
+            </div> 
+closing of class example -->           
 
             <div class="footer__right">
 
@@ -47,7 +50,7 @@ export const Footer = () => {
                     </div> <!-- closes yearChoice dropup-menu -->
                 </div> <!-- closes col2-->
 
-                <div class="col3"><div> =  &nbsp;</div><div id="postCount">0</div>
+                <div class="col3"><div> =  &nbsp;</div><div id="postCount" class="post-count">0</div>
                 </div> <!-- closes col3-->
 
             </div> <!-- closes footer__right -->
