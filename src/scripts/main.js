@@ -19,7 +19,7 @@ const showNavBar = () => {
 const showPostEntry = () => { 
     const entryElement = document.querySelector(".entry-form");
     entryElement.innerHTML = postEntry();
-  }
+}
 
 const showPostList = () => {
 	const postElement = document.querySelector(".postList");
@@ -161,7 +161,6 @@ applicationElement.addEventListener("click", (event) => {
         showPostList();
         showPostEntry();
     });
-
     } else if (event.target.id === "new-post__cancel") {
       showPostEntry();
     }

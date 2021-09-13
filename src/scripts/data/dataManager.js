@@ -1,8 +1,13 @@
+let userCollection = [];
+
 export const getUsers = () => {
     return fetch("http://localhost:8088/users")
     .then(response => response.json())
+    .then(parsedResponse => {
+        userCollection = parsedResponse
+        return parsedResponse;
+      })
 }
-
 
 let postCollection = [];
 
@@ -15,6 +20,7 @@ export const getPosts = () => {
       })
   }
 
+// this is from class lesson example but I used my own so it's never invoked on main.js -- keeping for future reference
 export const usePostCollection = () => {
     return [...postCollection];
 }
