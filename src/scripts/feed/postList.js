@@ -5,8 +5,7 @@ export const postList = (allPosts) => {
 		for (const postObject of allPosts) {
 			postHTML += Post(postObject)
 		}
-		return postHTML;
-	
+		return postHTML;	
 }
 
 const findYear = (obj) => {
