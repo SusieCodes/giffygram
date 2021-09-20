@@ -32,3 +32,5 @@ export const Post = (postObject) => {
       </section>
     `
   }
+
+
