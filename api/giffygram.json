@@ -97,20 +97,12 @@
       "timestamp": 1590987600000
     },
     {
-      "id": 2,
-      "title": "Title Goes Here - 2021",
-      "imageURL": "https://media.giphy.com/media/12PIT4DOj6Tgek/giphy.gif",
-      "description": "Cupcake ipsum dolor sit amet liquorice. Carrot cake pudding marshmallow sweet roll topping marzipan bear claw gummies candy. Gummies topping oat cake lemon drops danish cotton candy jelly sweets.",
-      "userId": 1,
-      "timestamp": 1609480800000
-    },
-    {
-      "id": 1,
-      "title": "Title Goes Here - 2021",
+      "title": "Title Goes Here ",
       "imageURL": "https://media.giphy.com/media/wzwktYRigQ2zLeykPI/giphy.gif",
       "description": "Cupcake ipsum dolor sit amet liquorice. Carrot cake pudding marshmallow sweet roll topping marzipan bear claw gummies candy. Gummies topping oat cake lemon drops danish cotton candy jelly sweets.",
-      "userId": 1,
-      "timestamp": 1622523600000
+      "userId": "1",
+      "timestamp": 1622523600000,
+      "id": 1
     },
     {
       "title": "Hashtag Blessed",
@@ -135,6 +127,22 @@
       "userId": 1,
       "timestamp": 1631240151731,
       "id": 13
+    },
+    {
+      "title": "Laugh Laugh Laugh",
+      "imageURL": "https://media.giphy.com/media/BBAdXxBAXp3wc/giphy.gif",
+      "description": "This made me laugh",
+      "userId": 1,
+      "timestamp": 1632151558442,
+      "id": 14
+    },
+    {
+      "title": "can I change the title?",
+      "imageURL": "https://media.giphy.com/media/BBAdXxBAXp3wc/giphy.gif",
+      "description": "i will delete this",
+      "userId": "1",
+      "timestamp": 1632152976418,
+      "id": 15
     }
   ],
   "messages": [
@@ -154,11 +162,5 @@
       "message": "This is my first message"
     }
   ],
-  "likes": [
-    {
-      "id": 1,
-      "userId": 1,
-      "postId": 2
-    }
-  ]
+  "likes": []
 }

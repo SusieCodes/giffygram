@@ -36,14 +36,43 @@ export const createPost = postObj => {
         .then(response => response.json())
 }
 
-// not exported because it is only called from within this file
-// const loggedInUser = {
-//     "id": "1",
-//     "name": "Susie",
-//     "dateJoined": "1630513838389",
-//     "email": "susie.stanley3@yahoo.com"
-// }
+export const deletePost = postId => {
+  return fetch(`http://localhost:8088/posts/${postId}`, {
+      method: "DELETE",
+      headers: {
+          "Content-Type": "application/json"
+      }
 
-// export const getLoggedInUser = () => {
-// 	return loggedInUser;
-// }
+  })
+      .then(response => response.json())
+}
+
+export const getSinglePost = (postId) => {
+  return fetch(`http://localhost:8088/posts/${postId}`)
+    .then(response => response.json())
+}
+
+export const updatePost = postObj => {
+  return fetch(`http://localhost:8088/posts/${postObj.id}`, {
+      method: "PUT",
+      headers: {
+          "Content-Type": "application/json"
+      },
+      body: JSON.stringify(postObj)
+
+  })
+      .then(response => response.json())
+}
+
+
+// not exported because it is only called from within this file
+const loggedInUser = {
+    "id": "1",
+    "name": "Susie",
+    "dateJoined": "1630513838389",
+    "email": "susie.stanley3@yahoo.com"
+}
+
+export const getLoggedInUser = () => {
+	return loggedInUser;
+}

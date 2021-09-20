@@ -3,7 +3,7 @@ export const postEntry = () => {
     <div class="new-post">
 
         <div class="add-post">
-        <h2>Add A Post</h2>
+        <h3>Add A Post</h3>
         </div> <!-- closes add-post-->
 
         <div class="entry-flex">
