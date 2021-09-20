@@ -135,14 +135,6 @@
       "userId": 1,
       "timestamp": 1632151558442,
       "id": 14
-    },
-    {
-      "title": "can I change the title?",
-      "imageURL": "https://media.giphy.com/media/BBAdXxBAXp3wc/giphy.gif",
-      "description": "i will delete this",
-      "userId": "1",
-      "timestamp": 1632152976418,
-      "id": 15
     }
   ],
   "messages": [
