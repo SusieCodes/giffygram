@@ -33,12 +33,12 @@
   ],
   "posts": [
     {
-      "id": 10,
-      "title": "Title Goes Here - 2017",
+      "title": "Giffys Be Funny",
       "imageURL": "https://media.giphy.com/media/hMXmfK8BKWQYwbJlIN/giphy.gif",
       "description": "Cupcake ipsum dolor sit amet liquorice. Carrot cake pudding marshmallow sweet roll topping marzipan bear claw gummies candy. Gummies topping oat cake lemon drops danish cotton candy jelly sweets.",
-      "userId": 1,
-      "timestamp": 1483250400000
+      "userId": "1",
+      "timestamp": 1483250400000,
+      "id": 10
     },
     {
       "id": 9,
