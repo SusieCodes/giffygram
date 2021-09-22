@@ -1,15 +1,16 @@
-import { getUsers, getPosts, usePostCollection, createPost, deletePost, getSinglePost, getLoggedInUser, updatePost } from "./data/dataManager.js";
+import { getUsers, getPosts, usePostCollection, createPost, deletePost, getSinglePost, getLoggedInUser, setLoggedInUser, updatePost, loginUser, logoutUser, registerUser, clearInfo } from "./data/dataManager.js";
 import { navBar } from "./nav/navBar.js";
 import { Footer, changeBtn } from "./nav/footer.js";
 import { postList, yearList } from "./feed/postList.js";
 import { postEntry } from "./feed/postEntry.js";
 import { PostEdit } from "./feed/postEdit.js"; 
+import { RegisterForm } from "./auth/RegisterForm.js"
+import { LoginForm } from "./auth/LoginForm.js"
 
 const allUsers = getUsers()
 .then(apiUsers => {
     console.log("now we can console the users", apiUsers)
 })
-console.log("All users: ", allUsers);
 
 const showNavBar = () => {
     const navElement = document.querySelector("header");
@@ -25,6 +26,7 @@ const showPostList = () => {
 	const postElement = document.querySelector(".postList");
 	getPosts().then((allPosts) => {
 		postElement.innerHTML = postList(allPosts.reverse());
+        document.getElementById("title").innerHTML = `<h3 class="center">All My Giffys</h3>`;
 	})
 }
 
@@ -51,8 +53,30 @@ const startGiffyGram = () => {
     showPostList();
     showFooter();
 }
+  
+const checkForUser = () => {
+    if (sessionStorage.getItem("user")){
+        setLoggedInUser(JSON.parse(sessionStorage.getItem("user")));
+      startGiffyGram();
+    } else {
+        showLoginRegister();
+    }
+}
 
-startGiffyGram();
+const showLoginRegister = () => {
+    showNavBar();
+    showFooter();
+    clearInfo();
+    const entryElement = document.querySelector(".entry-form");
+    //template strings can be used here too
+    entryElement.innerHTML = `${LoginForm()}${RegisterForm()}`;
+    //make sure the post list is cleared out
+  const postElement = document.querySelector(".postList");
+  postElement.innerHTML = "";
+}
+  
+// startGiffyGram();
+checkForUser();
 
 const handleGiffyClick = (event) => {
     if (event.target.id === "logout") {
@@ -63,22 +87,28 @@ const handleGiffyClick = (event) => {
         alert("You clicked on the pb jar")
     } else if (event.target.id === "twentyone") {
 		changeBtn(2021);
-        showYearList(2021);   
+        showYearList(2021);
+        window.scrollTo({ top: 0, behavior: "smooth" })   
     } else if (event.target.id === "twenty") {
 		changeBtn(2020);
-        showYearList(2020);   
+        showYearList(2020);
+        window.scrollTo({ top: 0, behavior: "smooth" })   
     } else if (event.target.id === "nineteen") {
 		changeBtn(2019);
-        showYearList(2019);   
+        showYearList(2019);
+        window.scrollTo({ top: 0, behavior: "smooth" })   
     } else if (event.target.id === "eighteen") {
 		changeBtn(2018);
-        showYearList(2018);   
+        showYearList(2018); 
+        window.scrollTo({ top: 0, behavior: "smooth" })  
     } else if (event.target.id === "seventeen") {
 		changeBtn(2017);
-        showYearList(2017);   
+        showYearList(2017); 
+        window.scrollTo({ top: 0, behavior: "smooth" })  
     } else if (event.target.id === "all") {
 		changeBtn("All");
-        showPostList();   
+        showPostList();
+        window.scrollTo({ top: 0, behavior: "smooth" })   
     }
 }
 
@@ -140,7 +170,7 @@ createPost(postObject).then(dbResponse => {
  
 // event listener for new post update
 applicationElement.addEventListener("click", event => {
-    event.preventDefault();
+    // event.preventDefault();
     if (event.target.id.startsWith("updatePost")) {
         console.log("you clicked updatePost button")
       const postId = event.target.id.split("__")[1];
@@ -166,6 +196,55 @@ applicationElement.addEventListener("click", event => {
         })
     }
   })
+  
+  applicationElement.addEventListener("click", event => {
+    // event.preventDefault();
+    if (event.target.id === "login__submit") {
+      //collect all the details into an object
+      const userObject = {
+        name: document.querySelector("input[name='name']").value,
+        email: document.querySelector("input[name='email']").value
+      }
+      loginUser(userObject)
+      .then(dbUserObj => {
+        if(dbUserObj){
+          sessionStorage.setItem("user", JSON.stringify(dbUserObj));
+          startGiffyGram();
+        }else {
+          //got a false value - no user
+          const entryElement = document.querySelector(".entry-form");
+          entryElement.innerHTML = `<p class="center">That user does not exist. Please try again or register for your free account.</p> ${LoginForm()} ${RegisterForm()}`;
+        }
+      })
+    }
+  }) 
+
+  applicationElement.addEventListener("click", event => {
+    // event.preventDefault();
+    if (event.target.id === "register__submit") {
+      //collect all the details into an object
+      const userObject = {
+        name: document.querySelector("input[name='registerName']").value,
+        email: document.querySelector("input[name='registerEmail']").value
+      }
+      registerUser(userObject)
+      .then(dbUserObj => {
+        sessionStorage.setItem("user", JSON.stringify(dbUserObj));
+        startGiffyGram();
+      })
+    }
+  })
+
+  applicationElement.addEventListener("click", event => {
+    if (event.target.id === "logout") {        
+        logoutUser();
+        console.log(getLoggedInUser());
+        sessionStorage.clear();
+        clearInfo();
+        checkForUser();
+    }
+  })
+  
 
 // import { getJokes } from "./data/dadJoke.js";
 

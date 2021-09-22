@@ -5,7 +5,12 @@
 
 /* Typography */
 
+/* making body:flex, min-height:100vh, & main flex:1 makes footer stay at bottom */
 body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    height: 100%;
     color: #404040;
     font-family: "Poppins", sans-serif;
     font-size: 20px;
@@ -39,15 +44,22 @@ h1, h2, h3, h4, h5, h6 {
 header {
     display: flex;
     flex-direction: row;
-    margin: auto;
+    margin: 0px auto;
 }
 
 .giffygram {
+    flex: 1;
     display: flex;
     flex-direction: column;
     justify-content: center;
     text-align: center;
     background-image: URL("../images/peanutbg.png");
+    background-repeat: repeat;
+    height: 100%;
+}
+
+.login-btns, .registration-btns {
+    text-align: center;
 }
 
 .flex-container {
@@ -55,12 +67,8 @@ header {
     align-self: center;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     margin-top: 172px;
     margin-bottom: 160px;
-    /* background-color: white; */
-    /* border-left: 2px solid powderblue; */
-    /* border-right: 2px solid powderblue; */
 }
 
 #title {
@@ -204,8 +212,4 @@ header {
 
 .highlight {
     border-color: purple;
-}
-
-.loginForm {
-    margin: 0px;
 }

@@ -24,7 +24,7 @@ export const Post = (postObject) => {
             <div class="details__when"> ${showDate}</div>
         </div> <!-- closes details -->
 
-        <div id="postBtns">
+        <div id="postBtns" class="postBtns">
         <button id="edit--${postObject.id}" class="post-btn">EDIT</button>
         <button id="delete--${postObject.id}" class="post-btn">DELETE</button>
         </div> <!-- closes postBtns -->
