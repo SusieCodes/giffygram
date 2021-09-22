@@ -12,13 +12,17 @@ export const getUsers = () => {
 let postCollection = [];
 
 export const getPosts = () => {
-    return fetch("http://localhost:8088/posts")
-      .then(response => response.json())
-      .then(parsedResponse => {
-        postCollection = parsedResponse
-        return parsedResponse;
-      })
-  }
+  const userId = getLoggedInUser().id
+  return fetch(`http://localhost:8088/posts?_expand=user`)
+    .then(response => response.json())
+    .then(parsedResponse => {
+      console.log("data we fetched with user", parsedResponse)
+      postCollection = parsedResponse;
+      console.log("data we saved into postCollection is: ", postCollection)
+      return parsedResponse;
+    })
+}
+
 
 // this is from class lesson example but I used my own so it's never invoked on main.js -- keeping for future reference
 export const usePostCollection = () => {
@@ -130,4 +134,21 @@ export const clearInfo = () => {
   document.getElementById("hide-nav__message").innerHTML = " ";
   document.getElementById("hide-nav__logout").innerHTML = " ";
   // hide.style.display = "none";
+}
+
+export const postLike = likeObject => {
+	return fetch(`http://localhost:8088/userLikes/`, {
+		method: "POST",
+		headers: {
+			"Content-Type": "application/json"
+		},
+		body: JSON.stringify(likeObject)
+	})
+		.then(response => response.json())
+		
+}
+
+export const getLikes = (postId) => {
+  return fetch(`http://localhost:8088/userLikes?postId=${postId}`)
+    .then(response => response.json())
 }

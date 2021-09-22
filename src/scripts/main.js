@@ -1,4 +1,4 @@
-import { getUsers, getPosts, usePostCollection, createPost, deletePost, getSinglePost, getLoggedInUser, setLoggedInUser, updatePost, loginUser, logoutUser, registerUser, clearInfo } from "./data/dataManager.js";
+import { getUsers, getPosts, usePostCollection, createPost, deletePost, getSinglePost, getLoggedInUser, setLoggedInUser, updatePost, loginUser, logoutUser, registerUser, clearInfo, postLike, getLikes } from "./data/dataManager.js";
 import { navBar } from "./nav/navBar.js";
 import { Footer, changeBtn } from "./nav/footer.js";
 import { postList, yearList } from "./feed/postList.js";
@@ -251,6 +251,19 @@ applicationElement.addEventListener("click", event => {
     }
   })
   
+  applicationElement.addEventListener("click", event => {
+	// event.preventDefault();
+	if (event.target.id.startsWith("like")) {
+	  const likeObject = {
+		 postId: parseInt(event.target.id.split("--")[1]),
+		 userId: getLoggedInUser().id
+	  }
+	  postLike(likeObject)
+		.then(response => {
+		  showPostList();
+		})
+	}
+  })
 
 // import { getJokes } from "./data/dadJoke.js";
 
