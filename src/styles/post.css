@@ -1,10 +1,11 @@
 .entry-form {
 display: flex;
-flex-direction: row;
+flex-direction: column;
 justify-content: center;
 }
 
 .new-post {
+    align-self: center;
     width: 520px;
     text-align: center;
     padding: 10px 30px 20px 30px;
@@ -34,7 +35,7 @@ justify-content: center;
 }
 
 .new-post__input {
-    width: 509px;
+    min-width: 509px;
     text-align: left;
     padding-left: 5px; /* this sets padding of placeholder text  */
     margin-top: 10px;
@@ -48,12 +49,10 @@ justify-content: center;
 }
 
 .new-entry-url {
-    width: 490px;
     text-align: left;
 }
 
 .new-entry-desc {
-    width: 492px;
     text-align: left;
 }
 
@@ -86,6 +85,12 @@ justify-content: center;
     margin: 15px 5px 0px 5px;
 }
 
+.postBtns {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
 .post-btn {
     font-size: 16px;
     font-weight: bolder;
@@ -98,8 +103,6 @@ justify-content: center;
     margin: 30px 15px 5px 15px;
 }
 
-
-
 /* .miniMode {
     padding: 1rem;
     margin: 0 25%;
@@ -109,21 +112,17 @@ justify-content: center;
     cursor: pointer;
 } */
 
-/* .newPost {
-    margin: 0 25%;
-}
-
-.newPost__input {
+.new-post__input {
     width: 30rem;
     margin: 0.5rem 0;
 }
 
-.newPost__description {
+.new-post__description {
     width: 100%;
     height: 5em;
 } */
 
-.newPost__drop {
+.new-post__drop {
     padding: 1rem;
     color: gray;
     font-size: 1rem;
@@ -131,33 +130,24 @@ justify-content: center;
     text-align: center;
 }
 
-.newPost__upload {
+.new-post__upload {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     padding: 0.75rem 0 0 0;
 }
 
-.newPost__fileUpload {
+.new-post__fileUpload {
     flex-basis: 30%;
 }
 
-.newPost__uploadPrompt {
+.new-post__uploadPrompt {
     flex-basis: 50%;
 }
 
-.newPost__plus {
+.new-post__plus {
     font-size: 6rem;
 }
-
-/* .post {
-    margin: 0 25%;
-    flex-basis: 50%;
-} */
-
-/* .post__image {
-    width: 100%;
-} */
 
 .post__actions {
     display: flex;

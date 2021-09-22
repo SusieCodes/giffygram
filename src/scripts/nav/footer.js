@@ -29,7 +29,7 @@ export const Footer = () => {
             </div> 
 closing of class example -->           
 
-            <div class="footer__right">
+            <div id="footer-right" class="footer__right">
 
                 <div class="col1">Posts from
                 </div> <!-- closes col1-->

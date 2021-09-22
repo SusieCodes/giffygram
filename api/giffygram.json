@@ -29,6 +29,16 @@
       "name": "Mary",
       "dateJoined": 1630513631183,
       "email": "mary@yahoo.com"
+    },
+    {
+      "name": "snoozer",
+      "email": "sstanley2014@yahoo.com",
+      "id": 6
+    },
+    {
+      "name": "Gabby",
+      "email": "gabby@yahoo.com",
+      "id": 7
     }
   ],
   "posts": [
@@ -129,12 +139,12 @@
       "id": 13
     },
     {
-      "title": "Laugh Laugh Laugh",
-      "imageURL": "https://media.giphy.com/media/BBAdXxBAXp3wc/giphy.gif",
-      "description": "This made me laugh",
+      "title": "One more time baby",
+      "imageURL": "https://media.giphy.com/media/VzeJ8Zl5kdi9KAD4Xk/giphy.gif",
+      "description": "funny stuff right there",
       "userId": 1,
-      "timestamp": 1632151558442,
-      "id": 14
+      "timestamp": 1632253139618,
+      "id": 15
     }
   ],
   "messages": [
