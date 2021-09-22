@@ -25,8 +25,8 @@ export const Post = (postObject) => {
         </div> <!-- closes details -->
 
         <div id="postBtns" class="postBtns">
-        <button id="edit--${postObject.id}" class="post-btn">EDIT</button>
-        <button id="delete--${postObject.id}" class="post-btn">DELETE</button>
+        <button id="edit--${postObject.id}" class="post-btn" type="button">EDIT</button>
+        <button id="delete--${postObject.id}" class="post-btn" type="button">DELETE</button>
         </div> <!-- closes postBtns -->
 
       </section>

@@ -39,6 +39,11 @@
       "name": "Gabby",
       "email": "gabby@yahoo.com",
       "id": 7
+    },
+    {
+      "name": "Angel",
+      "email": "angel@yahoo.com",
+      "id": 8
     }
   ],
   "posts": [

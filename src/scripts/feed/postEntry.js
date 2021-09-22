@@ -33,8 +33,8 @@ export const postEntry = () => {
         </div> <!-- closes entry-flex-->
 
         <div class="new-entry-btns">
-            <button id="new-post__submit" class="post-submit">SAVE</button>
-            <button id="new-post__cancel" class="post-cancel">CANCEL</button>
+            <button id="new-post__submit" class="post-submit" type="button">SAVE</button>
+            <button id="new-post__cancel" class="post-cancel" type="button">CANCEL</button>
         </div> <!-- closes new-entry-btns -->
 
     </div>

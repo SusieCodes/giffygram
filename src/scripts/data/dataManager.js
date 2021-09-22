@@ -126,5 +126,8 @@ export const clearInfo = () => {
   // document.getElementById("title").innerHTML = `<h3 class="center"></h3>`;
   document.getElementById("title").innerHTML = " ";
   document.getElementById("footer-right").innerHTML = " ";
+  document.getElementById("hide-nav__search").innerHTML = " ";
+  document.getElementById("hide-nav__message").innerHTML = " ";
+  document.getElementById("hide-nav__logout").innerHTML = " ";
   // hide.style.display = "none";
 }

@@ -76,19 +76,25 @@
 }
 
 .navigation__logout {
+    /* background-color: white;
+    border: 3px solid lightgray;
+    border-radius: 15px;
+    padding: 10px 15px; */
+    margin: auto auto;
+}
+
+.navigation__logout button {
     background-color: white;
     border: 3px solid lightgray;
     border-radius: 15px;
-    padding: 10px 15px;
-    margin: auto auto;}
-
-.navigation__logout button {
-    background-color: transparent;
-    border: 0px;
+    padding: 1px 10px 3px 10px;
+    /* margin: auto auto; */
 }
 
-.navigation__logout:hover {
-    background-color: rgb(235, 235, 235);
+.fakeLink:hover {
+    border-radius: 15px;
+    background-color: rgb(235, 235, 235);  
+    color: black;  
 }
 
 

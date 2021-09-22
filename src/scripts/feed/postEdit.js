@@ -36,8 +36,8 @@ export const PostEdit = (postObj) => {
 </div> <!-- closes entry-flex-->
 
 <div class="new-entry-btns">
-		<button id="updatePost__${postObj.id}" class="post-submit">UPDATE</button>
-		<button id="new-post__cancel" class="post-cancel">CANCEL</button>
+		<button id="updatePost__${postObj.id}" class="post-submit" type="button">UPDATE</button>
+		<button id="new-post__cancel" class="post-cancel" type="button">CANCEL</button>
 </div> <!-- closes new-entry-btns -->
 
 </div>

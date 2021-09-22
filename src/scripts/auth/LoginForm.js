@@ -23,8 +23,8 @@ export const LoginForm = () => {
 			</div>
 
 			<div class="login-btns">
-				<button id="login__submit" class="post-submit">LOGIN</button>
-				<button id="login__cancel" class="post-cancel">CANCEL</button>
+				<button id="login__submit" class="post-submit" type="button">LOGIN</button>
+				<button id="login__cancel" class="post-cancel" type="button">CANCEL</button>
 			</div> <!-- closes login-btns -->
 
 		</div> <!-- closes new-post -->
