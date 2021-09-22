@@ -144,7 +144,7 @@ applicationElement.addEventListener("click", (event) => {
 
 // event listener for new post submit and cancel (new and edit)
 applicationElement.addEventListener("click", event => {
-event.preventDefault();
+// event.preventDefault();
 if (event.target.id === "new-post__submit") {
     console.log("you clicked new-post-submit button")
     const title = document.querySelector("input[name='postTitle']").value
@@ -174,7 +174,7 @@ applicationElement.addEventListener("click", event => {
     if (event.target.id.startsWith("updatePost")) {
         console.log("you clicked updatePost button")
       const postId = event.target.id.split("__")[1];
-      //collect all the details into an object
+      //collecting all the details into an object
       const title = document.querySelector("input[name='postTitle']").value
       const url = document.querySelector("input[name='postURL']").value
       const description = document.querySelector("textarea[name='postDescription']").value
@@ -213,9 +213,12 @@ applicationElement.addEventListener("click", event => {
         }else {
           //got a false value - no user
           const entryElement = document.querySelector(".entry-form");
-          entryElement.innerHTML = `<p class="center">That user does not exist. Please try again or register for your free account.</p> ${LoginForm()} ${RegisterForm()}`;
+          entryElement.innerHTML = `<div class="userNotExist"><p>That user does not exist. Please try again or register for your free account.</p></div><!-- closes class="userNotExist"--> ${LoginForm()} ${RegisterForm()}`;
         }
       })
+    }
+    else if (event.target.id === "login__cancel") {
+        showLoginRegister();   
     }
   }) 
 
@@ -232,6 +235,9 @@ applicationElement.addEventListener("click", event => {
         sessionStorage.setItem("user", JSON.stringify(dbUserObj));
         startGiffyGram();
       })
+    }
+     else if (event.target.id === "login__cancel") {
+        showLoginRegister();   
     }
   })
 

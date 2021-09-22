@@ -23,8 +23,8 @@ export const RegisterForm = () => {
 			</div> <!-- closes email -->
 
       <div class="registration-btns">
-			<button id="register__submit" class="post-submit">REGISTER</button>
-			<button id="login__cancel" class="post-cancel">CANCEL</button>
+			<button id="register__submit" class="post-submit" type="button">REGISTER</button>
+			<button id="login__cancel" class="post-cancel" type="button">CANCEL</button>
       </div> <!-- closes login-btns -->
 
 		</div>
