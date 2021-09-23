@@ -150,12 +150,11 @@ if (event.target.id === "new-post__submit") {
     const title = document.querySelector("input[name='postTitle']").value
     const url = document.querySelector("input[name='postURL']").value
     const description = document.querySelector("textarea[name='postDescription']").value
-    //we have not created a user yet - for now, we will hard code `1`.
     const postObject = {
         title: title,
         imageURL: url,
         description: description,
-        userId: 1,
+        userId: getLoggedInUser().id, // userId.id,
         timestamp: Date.now()
     }
 createPost(postObject).then(dbResponse => {
@@ -173,7 +172,7 @@ applicationElement.addEventListener("click", event => {
     // event.preventDefault();
     if (event.target.id.startsWith("updatePost")) {
         console.log("you clicked updatePost button")
-      const postId = event.target.id.split("__")[1];
+      const postId = event.target.id.split("--")[1];
       //collecting all the details into an object
       const title = document.querySelector("input[name='postTitle']").value
       const url = document.querySelector("input[name='postURL']").value

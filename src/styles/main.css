@@ -198,7 +198,7 @@ header {
 }
 
 /* "User #" field */
-.details__user a {
+.details__user {
     color: PaleVioletRed;
     font-weight: 400;
     padding: 0px;

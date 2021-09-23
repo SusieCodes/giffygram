@@ -14,9 +14,9 @@
     },
     {
       "id": 3,
-      "name": "Susie",
+      "name": "Paige",
       "dateJoined": 1630513631183,
-      "email": "susie.stanley3@yahoo.com"
+      "email": "paige@yahoo.com"
     },
     {
       "id": 4,
@@ -44,6 +44,11 @@
       "name": "Angel",
       "email": "angel@yahoo.com",
       "id": 8
+    },
+    {
+      "name": "Ashley",
+      "email": "ashley@yahoo.com",
+      "id": 9
     }
   ],
   "posts": [
@@ -144,12 +149,20 @@
       "id": 13
     },
     {
-      "title": "One more time baby",
+      "title": "One more time baby oh yah",
       "imageURL": "https://media.giphy.com/media/VzeJ8Zl5kdi9KAD4Xk/giphy.gif",
       "description": "funny stuff right there",
       "userId": 1,
       "timestamp": 1632253139618,
       "id": 15
+    },
+    {
+      "title": "I love Shirley Temple",
+      "imageURL": "https://media.giphy.com/media/12PIT4DOj6Tgek/giphy.gif",
+      "description": "We need more Shirley Temples in the world!",
+      "userId": 4,
+      "timestamp": 1632358667521,
+      "id": 16
     }
   ],
   "messages": [
@@ -349,6 +362,41 @@
       "postId": 6,
       "userId": 1,
       "id": 44
+    },
+    {
+      "postId": 15,
+      "userId": 4,
+      "id": 45
+    },
+    {
+      "postId": 13,
+      "userId": 4,
+      "id": 46
+    },
+    {
+      "postId": 12,
+      "userId": 4,
+      "id": 47
+    },
+    {
+      "postId": 11,
+      "userId": 4,
+      "id": 48
+    },
+    {
+      "postId": 1,
+      "userId": 4,
+      "id": 49
+    },
+    {
+      "postId": 4,
+      "userId": 2,
+      "id": 50
+    },
+    {
+      "postId": 16,
+      "userId": 4,
+      "id": 51
     }
   ]
 }
