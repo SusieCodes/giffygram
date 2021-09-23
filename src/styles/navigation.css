@@ -76,10 +76,6 @@
 }
 
 .navigation__logout {
-    /* background-color: white;
-    border: 3px solid lightgray;
-    border-radius: 15px;
-    padding: 10px 15px; */
     margin: auto auto;
 }
 
@@ -88,7 +84,6 @@
     border: 3px solid lightgray;
     border-radius: 15px;
     padding: 1px 10px 3px 10px;
-    /* margin: auto auto; */
 }
 
 .fakeLink:hover {

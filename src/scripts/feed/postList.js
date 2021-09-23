@@ -59,3 +59,12 @@ export const yearList = (allPosts, year) => {
 	}
 }
 
+export const userList = (allPosts, loggedInUserId) => {
+	let userHTML = "";
+	for (const postObject of allPosts) {
+		if (postObject.userId === loggedInUserId) {
+			userHTML += Post(postObject)
+		} 
+	}
+	return userHTML;
+}

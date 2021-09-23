@@ -1,7 +1,6 @@
 .footer {
   display: flex;
   flex-direction: row;
-  justify-content: space-evenly;
   border-top: 3px solid lightblue;
   padding: 0px 10px;
   position: fixed;
@@ -13,7 +12,7 @@
 
 .footer__left {
   align-self: center;
-  flex-basis: 30%;
+  flex-basis: 18%;
   text-align: left;
   padding-top: 12px;
   margin: 0px;
@@ -26,10 +25,53 @@
   padding-bottom: 5px;
 }
  
-.footer__middle {
-  flex-basis: 30%;
-margin: auto auto;
-text-align: center;
+.footer__middle1 {
+  min-width: fit-content;
+  flex-basis: 16%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-self: center;
+  margin: auto 0px;
+  text-align: center;
+}
+
+.userOrAll {
+  align-self: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.userList {
+  font-size: 18px;
+  font-weight: bolder;
+  cursor: pointer;
+  white-space: nowrap;
+  color: rgb(124, 212, 223);
+  background-color: white;
+  border: 3px solid lightgray;
+  border-radius: 15px;
+  padding: 5px 15px; 
+  margin: 5px 10px; 
+}
+
+.allUserList {
+  font-size: 18px;
+  font-weight: bolder;
+  cursor: pointer;
+  white-space: nowrap;
+  color: rgb(124, 212, 223);
+  background-color: white;
+  border: 3px solid lightgray;
+  border-radius: 15px;
+  padding: 5px 15px; 
+  margin: 5px 10px; 
+}
+
+.footer__middle2 {
+  flex-basis: 31%;
+  white-space: nowrap;
+  text-align: center;
 } 
 
 .post-count {
@@ -49,14 +91,13 @@ text-align: center;
 }
 
 .footer__right {
-  flex-basis: 30%;
+  flex-basis: 24%;
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
   justify-content: center;
   text-align: right;
   margin: auto 0px;
-  /* padding-right: 50px; */
 }
 
 .col1 {
@@ -75,6 +116,7 @@ text-align: center;
   text-align: left;
   padding: 10px 0px 0px 10px;
   flex-wrap: nowrap;
+  /* margin-right: 40px; */
 }
 
 /************************************/

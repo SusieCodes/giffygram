@@ -69,15 +69,6 @@ export const updatePost = postObj => {
 }
 
 
-// not exported because it is only called from within this file
-// let loggedInUser = {
-//     "id": "1",
-//     "name": "Susie",
-//     "dateJoined": "1630513838389",
-//     "email": "susie.stanley3@yahoo.com"
-// }
-
-
 let loggedInUser = {}
 
 export const getLoggedInUser = () => {
@@ -90,21 +81,21 @@ export const setLoggedInUser = (userObj) => {
     loggedInUser = userObj;
   }
 
-  export const loginUser = (userObj) => {
-    return fetch(`http://localhost:8088/users?name=${userObj.name}&email=${userObj.email}`)
-    .then(response => response.json())
-    .then(parsedUser => {
-      //is there a user?
-      console.log("parsedUser", parsedUser) //data is returned as an array
-      if (parsedUser.length > 0){
-        setLoggedInUser(parsedUser[0]);
-        return getLoggedInUser();
-      }else {
-        //no user
-        return false;
-      }
-    })
-  }
+export const loginUser = (userObj) => {
+  return fetch(`http://localhost:8088/users?name=${userObj.name}&email=${userObj.email}`)
+  .then(response => response.json())
+  .then(parsedUser => {
+    //checks that there is a user
+    console.log("parsedUser (from loginUser function) returned from fetch to see if user input name and email exists in json file", parsedUser) //data is returned as an array
+    if (parsedUser.length > 0){ // checks to see if there is info in the array
+      setLoggedInUser(parsedUser[0]);
+      return getLoggedInUser();
+    }else {
+      //if no user
+      return false;
+    }
+  })
+}
 
 export const logoutUser = (userObj) => {
   console.log("you pressed logout");
@@ -126,8 +117,6 @@ export const registerUser = (userObj) => {
 }
 
 export const clearInfo = () => {
-  // const titleReset = document.getElementById("title");
-  // document.getElementById("title").innerHTML = `<h3 class="center"></h3>`;
   document.getElementById("title").innerHTML = " ";
   document.getElementById("footer-right").innerHTML = " ";
   document.getElementById("hide-nav__search").innerHTML = " ";
@@ -136,7 +125,7 @@ export const clearInfo = () => {
   // hide.style.display = "none";
 }
 
-export const postLike = likeObject => {
+export const postUserLike = likeObject => {
 	return fetch(`http://localhost:8088/userLikes/`, {
 		method: "POST",
 		headers: {

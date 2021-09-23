@@ -14,9 +14,9 @@
     },
     {
       "id": 3,
-      "name": "Susie",
+      "name": "Paige",
       "dateJoined": 1630513631183,
-      "email": "susie.stanley3@yahoo.com"
+      "email": "paige@yahoo.com"
     },
     {
       "id": 4,
@@ -44,6 +44,11 @@
       "name": "Angel",
       "email": "angel@yahoo.com",
       "id": 8
+    },
+    {
+      "name": "Ashley",
+      "email": "ashley@yahoo.com",
+      "id": 9
     }
   ],
   "posts": [
@@ -92,7 +97,7 @@
       "title": "Title Goes Here - 2019",
       "imageURL": "https://media.giphy.com/media/3oxRmeLK7bjcq0CCCA/giphy.gif",
       "description": "Cupcake ipsum dolor sit amet liquorice. Carrot cake pudding marshmallow sweet roll topping marzipan bear claw gummies candy. Gummies topping oat cake lemon drops danish cotton candy jelly sweets.",
-      "userId": 1,
+      "userId": 2,
       "timestamp": 1559365200000
     },
     {
@@ -123,7 +128,7 @@
       "title": "Hashtag Blessed",
       "imageURL": "https://media.giphy.com/media/GGg7L9DNKv1VC/giphy.gif",
       "description": "Feeling this right now!",
-      "userId": 1,
+      "userId": 2,
       "timestamp": 1631230042342,
       "id": 11
     },
@@ -144,12 +149,20 @@
       "id": 13
     },
     {
-      "title": "One more time baby",
+      "title": "One more time baby oh yah",
       "imageURL": "https://media.giphy.com/media/VzeJ8Zl5kdi9KAD4Xk/giphy.gif",
       "description": "funny stuff right there",
       "userId": 1,
       "timestamp": 1632253139618,
       "id": 15
+    },
+    {
+      "title": "I love Shirley Temple",
+      "imageURL": "https://media.giphy.com/media/12PIT4DOj6Tgek/giphy.gif",
+      "description": "We need more Shirley Temples in the world!",
+      "userId": 4,
+      "timestamp": 1632358667521,
+      "id": 16
     }
   ],
   "messages": [
@@ -349,6 +362,46 @@
       "postId": 6,
       "userId": 1,
       "id": 44
+    },
+    {
+      "postId": 15,
+      "userId": 4,
+      "id": 45
+    },
+    {
+      "postId": 13,
+      "userId": 4,
+      "id": 46
+    },
+    {
+      "postId": 12,
+      "userId": 4,
+      "id": 47
+    },
+    {
+      "postId": 11,
+      "userId": 4,
+      "id": 48
+    },
+    {
+      "postId": 1,
+      "userId": 4,
+      "id": 49
+    },
+    {
+      "postId": 4,
+      "userId": 2,
+      "id": 50
+    },
+    {
+      "postId": 16,
+      "userId": 4,
+      "id": 51
+    },
+    {
+      "postId": 1,
+      "userId": 9,
+      "id": 52
     }
   ]
 }
