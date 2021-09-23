@@ -4,11 +4,25 @@ export const Footer = () => {
                 <img id="jar" src="./images/giffylogo.png" alt="Giffygram icon" />
             </div>
 
-            <div class="footer__middle">
+            <div class="footer__middle1">
+
+                <div class="userOrAll">
+
+                    <div class="userList">
+                    See Your Posts Only <!-- button -->
+                    </div> <!-- closes userList-->
+                    <div class="allUserList">
+                    See All Posts <!-- button -->
+                    </div> <!-- closes allUserList-->
+
+                </div> <!-- closes userOrAll-->
+
+            </div> <!-- closes footer__middle1-->
+
+            <div class="footer__middle2">
                 <p class="giffy">Giffygram</p>
                 <p class="copyright">&copy;2021 Susie Stanley</p>
-            </div>
-           
+            </div> <!-- closes footer__middle2-->
             
  <!--  this was class example but I used mine instead --         
             <div id="example" class="example__menu">

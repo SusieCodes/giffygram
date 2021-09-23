@@ -125,7 +125,7 @@ export const clearInfo = () => {
   // hide.style.display = "none";
 }
 
-export const postLike = likeObject => {
+export const postUserLike = likeObject => {
 	return fetch(`http://localhost:8088/userLikes/`, {
 		method: "POST",
 		headers: {

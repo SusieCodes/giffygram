@@ -97,7 +97,7 @@
       "title": "Title Goes Here - 2019",
       "imageURL": "https://media.giphy.com/media/3oxRmeLK7bjcq0CCCA/giphy.gif",
       "description": "Cupcake ipsum dolor sit amet liquorice. Carrot cake pudding marshmallow sweet roll topping marzipan bear claw gummies candy. Gummies topping oat cake lemon drops danish cotton candy jelly sweets.",
-      "userId": 1,
+      "userId": 2,
       "timestamp": 1559365200000
     },
     {
@@ -128,7 +128,7 @@
       "title": "Hashtag Blessed",
       "imageURL": "https://media.giphy.com/media/GGg7L9DNKv1VC/giphy.gif",
       "description": "Feeling this right now!",
-      "userId": 1,
+      "userId": 2,
       "timestamp": 1631230042342,
       "id": 11
     },
@@ -397,6 +397,11 @@
       "postId": 16,
       "userId": 4,
       "id": 51
+    },
+    {
+      "postId": 1,
+      "userId": 9,
+      "id": 52
     }
   ]
 }

@@ -1,7 +1,7 @@
-import { getUsers, getPosts, usePostCollection, createPost, deletePost, getSinglePost, getLoggedInUser, setLoggedInUser, updatePost, loginUser, logoutUser, registerUser, clearInfo, postLike, getLikes } from "./data/dataManager.js";
+import { getUsers, getPosts, usePostCollection, createPost, deletePost, getSinglePost, getLoggedInUser, setLoggedInUser, updatePost, loginUser, logoutUser, registerUser, clearInfo, postUserLike, getLikes } from "./data/dataManager.js";
 import { navBar } from "./nav/navBar.js";
 import { Footer, changeBtn } from "./nav/footer.js";
-import { postList, yearList } from "./feed/postList.js";
+import { postList, yearList, userList } from "./feed/postList.js";
 import { postEntry } from "./feed/postEntry.js";
 import { PostEdit } from "./feed/postEdit.js"; 
 import { RegisterForm } from "./auth/RegisterForm.js"
@@ -34,6 +34,13 @@ const showYearList = (yearClicked) => {
 	const yearElement = document.querySelector(".postList");
 	getPosts().then((allPosts) => {
 		yearElement.innerHTML = yearList(allPosts.reverse(), yearClicked);
+	})
+}
+
+const showUserList = (loggedInUserId) => {
+	const userElement = document.querySelector(".postList");
+	getPosts().then((allPosts) => {
+		userElement.innerHTML = userList(allPosts.reverse(), loggedInUserId);
 	})
 }
 
@@ -199,7 +206,7 @@ applicationElement.addEventListener("click", event => {
   applicationElement.addEventListener("click", event => {
     // event.preventDefault();
     if (event.target.id === "login__submit") {
-      //collect all the details into an object
+      //collect user input into an object
       const userObject = {
         name: document.querySelector("input[name='name']").value,
         email: document.querySelector("input[name='email']").value
@@ -257,11 +264,23 @@ applicationElement.addEventListener("click", event => {
 		 postId: parseInt(event.target.id.split("--")[1]),
 		 userId: getLoggedInUser().id
 	  }
-	  postLike(likeObject)
+	  postUserLike(likeObject)
 		.then(response => {
 		  showPostList();
 		})
 	}
+  })
+
+  const userListElement = document.getElementById("footer");
+  userListElement.addEventListener("click", event => {
+    if (event.target.id === "userList") {
+        const userId = getLoggedInUser().id
+        showUserList(userId);
+        window.scrollTo({ top: 0, behavior: "smooth" })
+    }
+    else if (event.target.id === "allUserList") {
+        showPostList();
+    }
   })
 
 // import { getJokes } from "./data/dadJoke.js";
