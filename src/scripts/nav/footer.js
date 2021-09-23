@@ -8,10 +8,10 @@ export const Footer = () => {
 
                 <div class="userOrAll">
 
-                    <div class="userList">
+                    <div id="userList" class="userList">
                     See Your Posts Only <!-- button -->
                     </div> <!-- closes userList-->
-                    <div class="allUserList">
+                    <div  id="allUserList" class="allUserList">
                     See All Posts <!-- button -->
                     </div> <!-- closes allUserList-->
 

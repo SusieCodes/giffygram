@@ -280,6 +280,7 @@ applicationElement.addEventListener("click", event => {
     }
     else if (event.target.id === "allUserList") {
         showPostList();
+        window.scrollTo({ top: 0, behavior: "smooth" })
     }
   })
 
