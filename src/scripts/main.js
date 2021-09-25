@@ -26,7 +26,7 @@ const showPostList = () => {
 	const postElement = document.querySelector(".postList");
 	getPosts().then((allPosts) => {
 		postElement.innerHTML = postList(allPosts.reverse());
-        document.getElementById("title").innerHTML = `<h3 class="center">All My Giffys</h3>`;
+        document.getElementById("title").innerHTML = `<h3 class="center">All Giffys</h3>`;
 	})
 }
 
@@ -272,14 +272,17 @@ applicationElement.addEventListener("click", event => {
   })
 
   const userListElement = document.getElementById("footer");
+
   userListElement.addEventListener("click", event => {
     if (event.target.id === "userList") {
         const userId = getLoggedInUser().id
         showUserList(userId);
+        document.getElementById("title").innerHTML = `<h3 class="center">All My Giffys</h3>`
         window.scrollTo({ top: 0, behavior: "smooth" })
     }
     else if (event.target.id === "allUserList") {
         showPostList();
+        document.getElementById("title").innerHTML = `<h3 class="center">All Giffys</h3>`
         window.scrollTo({ top: 0, behavior: "smooth" })
     }
   })

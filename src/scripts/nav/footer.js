@@ -6,7 +6,7 @@ export const Footer = () => {
 
             <div class="footer__middle1">
 
-                <div class="userOrAll">
+                <div id="userOrAll" class="userOrAll">
 
                     <div id="userList" class="userList">
                     See Your Posts Only <!-- button -->

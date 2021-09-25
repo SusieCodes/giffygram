@@ -122,6 +122,7 @@ export const clearInfo = () => {
   document.getElementById("hide-nav__search").innerHTML = " ";
   document.getElementById("hide-nav__message").innerHTML = " ";
   document.getElementById("hide-nav__logout").innerHTML = " ";
+  document.getElementById("userOrAll").innerHTML = " ";
   // hide.style.display = "none";
 }
 
