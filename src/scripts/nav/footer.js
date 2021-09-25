@@ -22,26 +22,7 @@ export const Footer = () => {
             <div class="footer__middle2">
                 <p class="giffy">Giffygram</p>
                 <p class="copyright">&copy;2021 Susie Stanley</p>
-            </div> <!-- closes footer__middle2-->
-            
- <!--  this was class example but I used mine instead --         
-            <div id="example" class="example__menu">
-
-                <div class="dropmenu__holder">
-                    <span class="drop-text">Posts since </span><select id="yearSelection">
-                        <option>2021</option>
-                        <option>2020</option>
-                        <option>2019</option>
-                        <option>2018</option>
-                        <option>2017</option>
-                        <option>All</option>
-                    </select>
-
-                    <span id="postCount" class="post-count"> = 0</span>
-                </div>
-
-            </div> 
-closing of class example -->           
+            </div> <!-- closes footer__middle2-->           
 
             <div id="footer-right" class="footer__right">
 
@@ -51,14 +32,14 @@ closing of class example -->
                 <div class="col2">
                     <div id="yearChoice" class="dropup-menu">
                          
-                            <button class="menu-btn">Choose</button>
+                            <button id="choose" class="menu-btn">Choose</button>
                             <div class="menu-content">
                             <div id="twentyone" class="links">2021</div>
                             <div id="twenty" class="links">2020</div>
                             <div id="nineteen" class="links">2019</div>
                             <div id="eighteen" class="links">2018</div>
                             <div id="seventeen" class="links">2017</div>
-                            <div id="all" class="links">All</div>
+                            <div id="All" class="links">All</div>
                             </div> <!-- closes menu-content -->
             
                     </div> <!-- closes yearChoice dropup-menu -->
@@ -72,20 +53,36 @@ closing of class example -->
 }
 
 export const changeBtn = (year) => {
-	document.getElementById("yearChoice").innerHTML = `
-        <button class="menu-btn">${year}</button>
-        <div class="menu-content">
-        <div id="twentyone" class="links">2021</div>
-        <div id="twenty" class="links">2020</div>
-        <div id="nineteen" class="links">2019</div>
-        <div id="eighteen" class="links">2018</div>
-        <div id="seventeen" class="links">2017</div>
-        <div id="all" class="links">All</div>
-        </div> <!-- closes menu-content -->
-        `;
         if (year === "All") {
-        document.getElementById("title").innerHTML = `<h3 class="center">All My Giffys</h3>`    
+            document.getElementById("choose").innerHTML = `All Years`;
+            document.getElementById("title").innerHTML = `<h3 class="center">All My Giffys</h3>`    
+        } else if (year == "user") {
+            document.getElementById("choose").innerHTML = `Choose`;
+            document.getElementById("postCount").innerHTML = `0`;
         } else {
-        document.getElementById("title").innerHTML = `<h3 class="center">Giffys from ${year}</h3>`;
+            document.getElementById("choose").innerHTML = `${year}`;
+            document.getElementById("title").innerHTML = `<h3 class="center">Giffys from ${year}</h3>`;
         }
 }
+
+
+
+//  this was class example for dropdown menu but I used my own instead
+// ***********************************************************************************************************        
+//            <div id="example" class="example__menu">
+//                <div class="dropmenu__holder">
+//                    <span class="drop-text">Posts since </span><select id="yearSelection">
+//                        <option>2021</option>
+//                        <option>2020</option>
+//                        <option>2019</option>
+//                        <option>2018</option>
+//                        <option>2017</option>
+//                        <option>All</option>
+//                    </select>
+
+//                    <span id="postCount" class="post-count"> = 0</span>
+//                </div>
+
+//            </div> 
+// ***********************************************************************************************************
+// closing of class example
