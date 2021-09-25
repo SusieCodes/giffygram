@@ -27,6 +27,7 @@ const showPostList = () => {
 	getPosts().then((allPosts) => {
 		postElement.innerHTML = postList(allPosts.reverse());
         document.getElementById("title").innerHTML = `<h3 class="center">All Giffys</h3>`;
+        document.getElementById("postCount").innerHTML = 0;
 	})
 }
 
@@ -112,9 +113,9 @@ const handleGiffyClick = (event) => {
 		changeBtn(2017);
         showYearList(2017); 
         window.scrollTo({ top: 0, behavior: "smooth" })  
-    } else if (event.target.id === "all") {
+    } else if (event.target.id === "All") {
 		changeBtn("All");
-        showPostList();
+        showYearList(All);
         window.scrollTo({ top: 0, behavior: "smooth" })   
     }
 }
@@ -277,11 +278,13 @@ applicationElement.addEventListener("click", event => {
     if (event.target.id === "userList") {
         const userId = getLoggedInUser().id
         showUserList(userId);
+        changeBtn("user");
         document.getElementById("title").innerHTML = `<h3 class="center">All My Giffys</h3>`
         window.scrollTo({ top: 0, behavior: "smooth" })
     }
     else if (event.target.id === "allUserList") {
         showPostList();
+        changeBtn("user");
         document.getElementById("title").innerHTML = `<h3 class="center">All Giffys</h3>`
         window.scrollTo({ top: 0, behavior: "smooth" })
     }
