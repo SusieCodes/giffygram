@@ -55,7 +55,7 @@ export const Footer = () => {
 export const changeBtn = (year) => {
         if (year === "All") {
             document.getElementById("choose").innerHTML = `All Years`;
-            document.getElementById("title").innerHTML = `<h3 class="center">All My Giffys</h3>`    
+            document.getElementById("title").innerHTML = `<h3 class="center">All Giffys</h3>`    
         } else if (year == "user") {
             document.getElementById("choose").innerHTML = `Choose`;
             document.getElementById("postCount").innerHTML = `0`;
