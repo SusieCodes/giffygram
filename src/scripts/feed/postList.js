@@ -59,12 +59,17 @@ export const yearList = (allPosts, year) => {
 	}
 }
 
+let userCount = 0;
+
 export const userList = (allPosts, loggedInUserId) => {
 	let userHTML = "";
+    userCount = 0;
 	for (const postObject of allPosts) {
 		if (postObject.userId === loggedInUserId) {
 			userHTML += Post(postObject)
+            userCount++;
 		} 
 	}
+    document.getElementById("postCount").innerHTML = `${ userCount }`;
 	return userHTML;
 }
